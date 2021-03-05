@@ -1,0 +1,1659 @@
+@charset "utf-8";
+@import url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css);
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, button, abbr, acronym, address, code, del,
+dfn, em, img, strong, sub, sup, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th,
+td, hr{margin:0;padding:0;font-size:100%;box-sizing: border-box;}
+body{height:100%;min-height:100%;font-family:'Noto Sans Korean','Malgun Gothic','맑은고딕','돋움',dotum, sans-serif;font-size:16px;color:#737373;line-height:1.5;background:url(../images/content_bg4.png) repeat;}
+h2, h3, h4, h5, h6 {font-weight:normal}
+ol, ul, li {list-style:none}
+table {width:100%; border-collapse:collapse;border-spacing:0}
+form, fieldset, iframe {display:block;border:0}
+img, button {border:0 none;vertical-align:top;}
+hr {height:0; display:none}
+i, em, address{font-style:normal}
+blockquote, q {quotes:none}
+caption, legend {overflow:hidden;visibility:hidden;position:absolute;width:0;height:0;padding:0;margin:0;font-size:0;text-indent:-100%;white-space:nowrap;z-index:-1}
+header, footer, section, article, aside, nav, hgroup, details, menu, figure, figcaption {display:block;box-sizing: border-box;}
+input, textarea, select, button {font-family:'Noto Sans Korean','Malgun Gothic','맑은고딕','돋움',dotum, sans-serif;font-size:16px;color:#919090;line-height:1.5;letter-spacing:0;vertical-align:middle; border:none;}
+input, textarea {margin:0;padding:0;  background:none; box-sizing:border-box;}
+textarea {resize:none}
+a {color:#919090;text-decoration:none}
+a:link, a:visited {text-decoration:none}
+a:hover {text-decoration:none}
+.blind{display: none;overflow: hidden;position: absolute;width: 0;height: 0;padding: 0;margin: 0; font-size: 0;line-height: 0; text-indent: -9999em; visibility: hidden; outline:none; z-index: -1;}
+html,body{overflow:hidden;height:100%;}
+
+@media screen and (max-width:2000px){
+  *{
+    cursor:none;
+  }
+  /* 마우스 커서 */
+  #cursor {
+   position: absolute;
+   width: 30px;
+   height: 30px;
+   left: -100px;
+   cursor: none;
+   pointer-events: none;
+   z-index: 3000;
+  }
+  #audio_div{display:none;}
+
+  #wrap{width:100%; height:100%;}
+  #wrap > h1{font-size:0;}
+  header .logo_box{position:absolute; padding:20px 0px 0px 20px;}
+  header .logo_box img{position:absolute; height:70px; z-index:15;}
+  /* #wrap header{position:absolute;width:100%; height:70px; left:0px; top:0px; z-index:1; background-color:#19034E;} */
+  #container{width:100%; height:100%; z-index:3;}
+  #wrap footer{width:100%; height:70px; position:fixed; left:0px; bottom:0px; z-index:9;}
+  #wrap footer ul{height:100%; width: 100%; display:flex; flex-direction:row; justify-content:flex-end; padding-top:20px;}
+  #wrap footer ul li{margin-right:20px;}
+  #wrap footer ul li:last-child{margin-right:40px;}
+  #wrap footer p{position:absolute; top:20px; left:20px; bottom:20px; font-size:0.6rem;z-index:7; display:inline-block; color:#432884;}
+
+  #background{width:100%; height:100%; z-index:5;}
+  #content{
+    position:absolute; height:100%; width:100%; top:0px; left:0px; padding-top:70px;
+    padding-bottom:160px; z-index:7; overflow-y:auto; text-align:center;}
+  #content #main_map{ height:900px; width:1120px; z-index:11;}
+  #content #nav{position:absolute; width:100%; height:100%; top:70px; left:0px;}
+  #content #nav nav{width:100%; height:100%;}
+  #content #nav nav ul li{display:inline-block;}
+  #content #compass_btn{position:absolute; width:240px; height:240px; top:20px; right:40px; z-index:13;}
+  #wseoul_btn{position:absolute; top:290px; right:700px;}
+  #eseoul_btn{position:absolute; top:210px; right:930px;}
+  #universal_btn{position:absolute; top:430px; right:500px;}
+  #gangwon_btn{position:absolute; top:610px; right:500px;}
+  #incheon_btn{position:absolute; top: 670px; right:880px;}
+
+  #compass_modal{
+    position:absolute; z-index:1000;
+    width:100%; height:100%;
+    background:rgba(0,0,0,0.8);
+    top:0; left:0;
+    display:none;
+  }
+  #compass_content{
+    width:700px; height:300px;
+    background:rgba(0,0,0,0); border-radius:10px;
+    position:relative; top:50%; left:50%;
+    margin-top:-150px; margin-left:-350px;
+    text-align:center; box-sizing:border-box; padding:auto 0;
+    line-height:23px;
+  }
+  #compass_content #text_compass{width:680px; height:auto;}
+  #text_compass_mobile{width:350px; height:auto; display:none;}
+  #compass_text {display:none;}
+  #compass_modal .close_btn{position:absolute; top:100%; left:50%;
+    width:120px; height:30px; line-height:15px; border-radius:7px;
+    font-size:0.9rem; display:inline-block;
+    z-index:13; margin-left:-60px;
+  }
+
+  .wrap_btn {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .content_btn {
+    width: 130px;
+    height: 40px;
+    font-family: '맑은고딕';
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    outline: none;
+    }
+    #wseoul_btn{background-color:#F2CA5A;}
+    #eseoul_btn{background-color:#1BAF10;}
+    #universal_btn{background-color:#456CCE;}
+    #gangwon_btn{background-color:#F47A69;}
+    #incheon_btn{background-color:#FC2A15;}
+
+  .content_btn:hover {
+    background-color: #432884;
+    box-shadow: 0px 15px 20px rgba(30, 18, 68, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+
+  .area_modal{
+    position:absolute; z-index:1001;
+    width:100%; height:100%;
+    background:rgba(0,0,0,0.8);
+    top:0; left:0;
+    display:none;
+  }
+  .area_content{
+    width:300px; height:500px;
+    background:rgba(0,0,0,0); border-radius:10px;
+    position:relative; top:50%; left:50%;
+    margin-top:-250px; margin-left:-150px;
+    box-sizing:border-box;
+    line-height:23px;
+    text-align:center;
+    z-index:9;
+  }
+  .area_content img{z-index:10;width:360px; height:500px;margin-left:-30px;}
+  .area_content ul {position:absolute; width:100%; height:100%; top:80px; left:0px; z-index:11;}
+  .area_content ul li{display:inline-block;}
+  .area_modal .close_btn{
+    position:fixed; top:20px; right:20px;
+    width:120px; height:30px; line-height:15px; border-radius:7px;
+    font-size:0.9rem; display:inline-block;
+    z-index:13;
+  }
+
+  .univ_modal{
+    position:absolute; z-index:1002;
+    width:100%; height:100%;
+    background:rgba(0,0,0,1);
+    top:0; left:0;
+    display:none;
+  }
+  .univ_modal .univ_content{
+    width:450px; height:600px;
+    background:#fff; border-radius:10px;
+    position:relative; top:50%; left:50%;
+    margin-top:-300px; margin-left:-225px;
+    box-sizing:border-box; padding:0 0 15px 0;
+    line-height:23px;
+    text-align:center;
+    z-index:15;
+    overflow-y:auto;
+    overflow-x:hidden;
+  }
+  .univ_content > div{width:450px; height:28px; font-size:12px; padding-top:8px;}
+  .univ_content table tr td{width:450px; margin-bottom:10px; vertical-align: middle; text-align:center;}
+  .univ_content table tr td a img{width:100px; height:100px; margin:5px 0 10px 20px; float:left;}
+  .univ_content table tr td h1{width:310px; height:100px; display:inline-block; margin-top:10px; margin-right:20px; padding-top:15px; font-size:23px; line-height:1.2;}
+  .univ_content table tr td h1 strong{font-size:30px;}
+  .univ_content table tr td .short_name{padding-top:38px;}
+  .univ_content table tr td .long_name{font-size:19px;}
+  .univ_content table tr td #son_name strong{font-size:25px;}
+  .univ_content table tr td #femigo_name{font-size:19px; padding-top:5px;}
+  .univ_content table tr td #femigo_name strong{font-size:25px;}
+  .univ_content table tr td #modu_name{padding-top:30px;}
+  .univ_content table tr td p{width:450px; height:180px; padding: 0 20px; font-size:0.9rem; text-align:justify;}
+  .univ_content table tr td .long_text{height:240px;}
+  .univ_content table tr .table_number{display:none;}
+  .univ_content table tr th{display:none;}
+  .univ_content table tr td #dong01_text strong{letter-spacing: -0.05rem}
+  .univ_content table tr td #sungsin01_text strong{letter-spacing: -0.05rem}
+  .univ_modal .close_btn{
+    position:absolute; top:96%; left:50%; margin-top:-15px;
+    width:120px; height:30px; line-height:15px; border-radius:7px;
+    margin-left:-60px;
+    font-size:0.8rem; display:inline-block;
+    z-index:17;
+  }
+
+  #wseoul_content ul li img, #eseoul_content ul li img, #universal_content ul li img,
+  #incheon_content ul li img, #gangwon_content ul li img{width:45px; height:90px; position:absolute;}
+  /* 서울(서부) 대학 아이콘 */
+  #seoul_btn{top:-10%; left:40%;}
+  #sung_btn{top:12%; left:33%;}
+  #sook_btn{top:24%; left:50%;}
+  #yeons_btn{top:10%; left:75%;}
+  #ehwa_btn{top:35%; left:20%;}
+  #jung_btn{top:45%; left:35%;}
+
+  /* 서울(동부) 대학 아이콘 */
+  #gyeong_btn{top:0%; left:69%;}
+  #go_btn{top:8%; left:52%;}
+  #gook_btn{top:10%; left:32%;}
+  #dong_btn{top:30%; left:30%;}
+  #sungsin_btn{top:28%; left:52%;}
+  #han_btn{top:42%; left:45%;}
+
+  #modu_btn{top:22%; left:42%;}
+  #univfemi_btn{top:38%; left:60%;}
+
+  #inc_btn{top:15%; left:45%;}
+  #inha_btn{top:36%; left:70%;}
+
+  #yeonw_btn{top:28%; left:42%;}
+}
+
+@media screen and (width:1024px) and (height:1366px){
+  *{
+    cursor:none;
+  }
+  /* 마우스 커서 */
+  #cursor {
+   position: absolute;
+   width: 30px;
+   height: 30px;
+   left: -100px;
+   cursor: none;
+   pointer-events: none;
+   z-index: 3000;
+  }
+  #audio_div{display:none;}
+
+  #wrap{width:100%; height:100%;}
+  #wrap > h1{font-size:0;}
+  header .logo_box{position:absolute; padding:20px 0px 0px 20px;}
+  header .logo_box img{position:absolute; height:70px; z-index:15;}
+  /* #wrap header{position:absolute;width:100%; height:70px; left:0px; top:0px; z-index:1; background-color:#19034E;} */
+  #container{width:100%; height:100%; z-index:3;}
+  #wrap footer{width:100%; height:70px; position:fixed; left:0px; bottom:0px; z-index:9;}
+  #wrap footer ul{height:100%; width: 100%; display:flex; flex-direction:row; justify-content:flex-end; padding-top:20px;}
+  #wrap footer ul li{margin-right:20px;}
+  #wrap footer ul li:last-child{margin-right:20px;}
+  #wrap footer p{position:absolute; top:20px; left:20px; bottom:20px; font-size:0.6rem;z-index:7; display:inline-block; color:#432884;}
+
+  #background{width:100%; height:100%; z-index:5;}
+  #content{
+    position:absolute; height:100%; width:100%; top:0px; left:0px; padding-top:70px;
+    padding-bottom:160px; z-index:7; overflow-y:hidden; text-align:center;}
+  #content #main_map{ height:auto; width:1000px; z-index:11;}
+  #content #nav{position:absolute; width:100%; height:100%; top:70px; left:0px;}
+  #content #nav nav{width:100%; height:100%;}
+  #content #nav nav ul li{display:inline-block;}
+  #content #compass_btn{position:absolute; width:240px; height:240px; top:20px; right:20px; z-index:13;}
+  #wseoul_btn{position:absolute; top:370px; right:550px;}
+  #eseoul_btn{position:absolute; top:250px; right:790px;}
+  #universal_btn{position:absolute; top:580px; right:380px;}
+  #gangwon_btn{position:absolute; top:840px; right:400px;}
+  #incheon_btn{position:absolute; top:900px; right:770px;}
+
+  #compass_modal{
+    position:absolute; z-index:1000;
+    width:100%; height:100%;
+    background:rgba(0,0,0,0.8);
+    top:0; left:0;
+    display:none;
+  }
+  #compass_content{
+    width:1000px; height:400px;
+    background:rgba(0,0,0,0); border-radius:10px;
+    position:relative; top:50%; left:50%;
+    margin-top:-200px; margin-left:-500px;
+    text-align:center; box-sizing:border-box; padding:auto 0;
+    line-height:23px;
+  }
+  #compass_content #text_compass{width:1000px; height:auto;}
+  #text_compass_mobile{width:350px; height:auto; display:none;}
+  #compass_text {display:none;}
+  #compass_modal .close_btn{position:absolute; top:110%; left:50%;
+    width:120px; height:30px; line-height:15px; border-radius:7px;
+    font-size:0.9rem; display:inline-block;
+    z-index:13; margin-left:-60px;
+  }
+
+  .wrap_btn {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .content_btn {
+    width: 130px;
+    height: 40px;
+    font-family: '맑은고딕';
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    outline: none;
+    }
+    #wseoul_btn{background-color:#F2CA5A;}
+    #eseoul_btn{background-color:#1BAF10;}
+    #universal_btn{background-color:#456CCE;}
+    #gangwon_btn{background-color:#F47A69;}
+    #incheon_btn{background-color:#FC2A15;}
+
+  .content_btn:hover {
+    background-color: #432884;
+    box-shadow: 0px 15px 20px rgba(30, 18, 68, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+
+  .area_modal{
+    position:absolute; z-index:1001;
+    width:100%; height:100%;
+    background:rgba(0,0,0,0.8);
+    top:0; left:0;
+    display:none;
+  }
+  .area_content{
+    width:600px; height:1000px;
+    background:rgba(0,0,0,0); border-radius:10px;
+    position:relative; top:50%; left:50%;
+    margin-top:-500px; margin-left:-300px;
+    box-sizing:border-box;
+    line-height:23px;
+    text-align:center;
+    z-index:9;
+  }
+  .area_content img{z-index:10;width:720px; height:1000px;margin-left:-60px;}
+  .area_content ul {position:absolute; width:100%; height:100%; top:80px; left:0px; z-index:11;}
+  .area_content ul li{display:inline-block;}
+  .area_modal .close_btn{
+    position:fixed; top:40px; right:40px;
+    width:180px; height:45px; line-height:15px; border-radius:9px;
+    font-size:1.5rem; display:inline-block;
+    z-index:13;
+  }
+
+  .univ_modal{
+    position:absolute; z-index:1002;
+    width:100%; height:100%;
+    background:rgba(0,0,0,1);
+    top:0; left:0;
+    display:none;
+  }
+  .univ_modal .univ_content{
+    width:450px; height:600px;
+    background:#fff; border-radius:10px;
+    position:relative; top:50%; left:50%;
+    margin-top:-300px; margin-left:-225px;
+    box-sizing:border-box; padding:0 0 15px 0;
+    line-height:23px;
+    text-align:center;
+    z-index:15;
+    overflow-y:auto;
+    overflow-x:hidden;
+  }
+
+  .univ_modal .close_btn{
+    position:absolute; top:92%; left:50%;
+    width:120px; height:30px; line-height:15px; border-radius:7px;
+    margin-left:-60px;
+    font-size:0.8rem; display:inline-block;
+    z-index:17;
+  }
+
+  .univ_content > div{width:450px; height:28px; font-size:12px; padding-top:8px;}
+  .univ_content table tr td{width:450px; margin-bottom:10px; vertical-align: middle; text-align: center;}
+  .univ_content table tr td a img{width:100px; height:100px; margin:5px 0 10px 20px; float:left;}
+  .univ_content table tr td h1{width:310px; height:100px; display:inline-block; margin-top:10px; margin-right:20px; padding-top:15px; font-size:23px; line-height:1.2;}
+  .univ_content table tr td h1 strong{font-size:30px;}
+  .univ_content table tr td .short_name{padding-top:38px;}
+  .univ_content table tr td .long_name{font-size:19px;}
+  .univ_content table tr td #son_name strong{font-size:25px;}
+  .univ_content table tr td #femigo_name{font-size:19px; padding-top:5px;}
+  .univ_content table tr td #femigo_name strong{font-size:25px;}
+  .univ_content table tr td #modu_name{padding-top:30px;}
+  .univ_content table tr td p{width:450px; height:180px; padding: 0 20px; font-size:0.9rem; text-align:justify;}
+  .univ_content table tr td .long_text{height:240px;}
+  .univ_content table tr .table_number{display:none;}
+  .univ_content table tr th{display:none;}
+  .univ_content table tr td #dong01_text strong{letter-spacing: -0.05rem}
+  .univ_content table tr td #sungsin01_text strong{letter-spacing: -0.05rem}
+  .univ_modal .close_btn{
+    position:absolute; top:75%; left:50%;
+    width:180px; height:45px; line-height:15px; border-radius:9px;
+    margin-left:-90px;
+    font-size:1.0rem; display:inline-block;
+    z-index:17;
+  }
+
+  #wseoul_content ul li img, #eseoul_content ul li img, #universal_content ul li img,
+  #incheon_content ul li img, #gangwon_content ul li img{width:80px; height:160px; position:absolute;}
+  /* 서울(서부) 대학 아이콘 */
+  #seoul_btn{top:0%; left:45%;}
+  #sung_btn{top:24%; left:33%;}
+  #sook_btn{top:30%; left:50%;}
+  #yeons_btn{top:20%; left:80%;}
+  #ehwa_btn{top:45%; left:20%;}
+  #jung_btn{top:55%; left:35%;}
+
+  /* 서울(동부) 대학 아이콘 */
+  #gyeong_btn{top:15%; left:69%;}
+  #go_btn{top:23%; left:52%;}
+  #gook_btn{top:25%; left:32%;}
+  #dong_btn{top:45%; left:34%;}
+  #sungsin_btn{top:43%; left:57%;}
+  #han_btn{top:50%; left:47%;}
+
+  #modu_btn{top:37%; left:42%;}
+  #univfemi_btn{top:53%; left:60%;}
+
+  #inc_btn{top:15%; left:45%;}
+  #inha_btn{top:46%; left:65%;}
+
+  #yeonw_btn{top:35%; left:50%;}
+
+}
+
+@media screen and (max-width:1023px){
+  *{
+    cursor:none;
+  }
+  /* 마우스 커서 */
+  #cursor {
+   position: absolute;
+   width: 30px;
+   height: 30px;
+   left: -100px;
+   cursor: none;
+   pointer-events: none;
+   z-index: 3000;
+  }
+  #audio_div{display:none;}
+
+  #wrap{width:100%; height:100%;}
+  #wrap > h1{font-size:0;}
+  header .logo_box{position:absolute; padding:20px 0px 0px 20px;}
+  header .logo_box img{position:absolute; height:70px; z-index:15;}
+  /* #wrap header{position:absolute;width:100%; height:70px; left:0px; top:0px; z-index:1; background-color:#19034E;} */
+  #container{width:100%; height:100%; z-index:3;}
+  #wrap footer{width:100%; height:70px; position:fixed; left:0px; bottom:0px; z-index:9;}
+  #wrap footer ul{height:100%; width: 100%; display:flex; flex-direction:row; justify-content:flex-end; padding-top:20px;}
+  #wrap footer ul li{margin-right:20px;}
+  #wrap footer ul li:last-child{margin-right:20px;}
+  #wrap footer p{position:absolute; top:20px; left:20px; bottom:20px; font-size:0.6rem;z-index:7; display:inline-block; color:#432884;}
+
+  #background{width:100%; height:100%; z-index:5;}
+  #content{
+    position:absolute; height:100%; width:100%; top:0px; left:0px; padding-top:70px;
+    padding-bottom:20px; z-index:7; overflow-y:auto; text-align:center;}
+  #content #main_map{ height:auto; width:720px; z-index:11; padding-top:20px;}
+  #content #nav{position:absolute; width:100%; height:100%; top:70px; left:0px;}
+  #content #nav nav{width:100%; height:100%;}
+  #content #nav nav ul li{display:inline-block;}
+  #content #compass_btn{position:absolute; width:240px; height:240px; top:20px; right:20px; z-index:13;}
+  #wseoul_btn{position:absolute; top:260px; right:360px;}
+  #eseoul_btn{position:absolute; top:190px; right:560px;}
+  #universal_btn{position:absolute; top:420px; right:280px;}
+  #gangwon_btn{position:absolute; top:600px; right:270px;}
+  #incheon_btn{position:absolute; top:650px; right:540px;}
+
+  #compass_modal{
+    position:absolute; z-index:1000;
+    width:100%; height:100%;
+    background:rgba(0,0,0,0.8);
+    top:0; left:0;
+    display:none;
+  }
+  #compass_content{
+    width:1000px; height:400px;
+    background:rgba(0,0,0,0); border-radius:10px;
+    position:relative; top:50%; left:50%;
+    margin-top:-200px; margin-left:-500px;
+    text-align:center; box-sizing:border-box; padding:auto 0;
+    line-height:23px;
+  }
+  #compass_content #text_compass{width:760px; height:auto;}
+  #text_compass_mobile{width:350px; height:auto; display:none;}
+  #compass_text {display:none;}
+  #compass_modal .close_btn{position:absolute; top:90%; left:50%;
+    width:120px; height:30px; line-height:15px; border-radius:7px;
+    font-size:0.9rem; display:inline-block;
+    z-index:13; margin-left:-60px;
+  }
+
+  .wrap_btn {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .content_btn {
+    width: 130px;
+    height: 40px;
+    font-family: '맑은고딕';
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    outline: none;
+    }
+    #wseoul_btn{background-color:#F2CA5A;}
+    #eseoul_btn{background-color:#1BAF10;}
+    #universal_btn{background-color:#456CCE;}
+    #gangwon_btn{background-color:#F47A69;}
+    #incheon_btn{background-color:#FC2A15;}
+
+  .content_btn:hover {
+    background-color: #432884;
+    box-shadow: 0px 15px 20px rgba(30, 18, 68, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+
+  .area_modal{
+    position:absolute; z-index:1001;
+    width:100%; height:100%;
+    background:rgba(0,0,0,0.8);
+    top:0; left:0;
+    display:none;
+  }
+  .area_content{
+    width:576px; height:800px;
+    background:rgba(0,0,0,0); border-radius:10px;
+    position:relative; top:50%; left:50%;
+    margin-top:-400px; margin-left:-288px;
+    box-sizing:border-box;
+    line-height:23px;
+    text-align:center;
+    z-index:9;
+  }
+  .area_content img{z-index:10;width:576px; height:800px;margin-left:0;}
+  .area_content ul {position:absolute; width:100%; height:100%; top:80px; left:0px; z-index:11;}
+  .area_content ul li{display:inline-block;}
+  .area_modal .close_btn{
+    position:fixed; top:40px; right:40px;
+    width:180px; height:45px; line-height:15px; border-radius:9px;
+    font-size:1.5rem; display:inline-block;
+    z-index:13;
+  }
+
+  .univ_modal{
+    position:absolute; z-index:1002;
+    width:100%; height:100%;
+    background:rgba(0,0,0,1);
+    top:0; left:0;
+    display:none;
+  }
+  .univ_modal .univ_content{
+    width:450px; height:600px;
+    background:#fff; border-radius:10px;
+    position:relative; top:50%; left:50%;
+    margin-top:-300px; margin-left:-225px;
+    box-sizing:border-box; padding:0 0 15px 0;
+    line-height:23px;
+    text-align:center;
+    z-index:15;
+    overflow-y:auto;
+    overflow-x:hidden;
+  }
+
+  .univ_content > div{width:450px; height:28px; font-size:12px; padding-top:8px;}
+  .univ_content table tr td{width:450px; margin-bottom:10px; vertical-align: middle; text-align: center;}
+  .univ_content table tr td a img{width:100px; height:100px; margin:5px 0 10px 20px; float:left;}
+  .univ_content table tr td h1{width:310px; height:100px; display:inline-block; margin-top:10px; margin-right:20px; padding-top:15px; font-size:23px; line-height:1.2;}
+  .univ_content table tr td h1 strong{font-size:30px;}
+  .univ_content table tr td .short_name{padding-top:38px;}
+  .univ_content table tr td .long_name{font-size:19px;}
+  .univ_content table tr td #son_name strong{font-size:25px;}
+  .univ_content table tr td #femigo_name{font-size:19px; padding-top:10px;}
+  .univ_content table tr td #femigo_name strong{font-size:25px;}
+  .univ_content table tr td #modu_name{padding-top:30px;}
+  .univ_content table tr td p{width:450px; height:180px; padding: 0 20px; font-size:0.9rem; text-align:justify;}
+  .univ_content table tr td .long_text{height:240px;}
+  .univ_content table tr .table_number{display:none;}
+  .univ_content table tr th{display:none;}
+  .univ_content table tr td #dong01_text strong{letter-spacing: -0.05rem}
+  .univ_content table tr td #sungsin01_text strong{letter-spacing: -0.05rem}
+  .univ_modal .close_btn{
+    position:absolute; top:85%; left:50%;
+    width:180px; height:45px; line-height:15px; border-radius:9px;
+    margin-left:-90px;
+    font-size:1rem; display:inline-block;
+    z-index:17;
+  }
+
+  #wseoul_content ul li img, #eseoul_content ul li img, #universal_content ul li img,
+  #incheon_content ul li img, #gangwon_content ul li img{width:60px; height:120px; position:absolute;}
+  /* 서울(서부) 대학 아이콘 */
+  #seoul_btn{top:0%; left:40%;}
+  #sung_btn{top:24%; left:33%;}
+  #sook_btn{top:30%; left:50%;}
+  #yeons_btn{top:10%; left:75%;}
+  #ehwa_btn{top:45%; left:20%;}
+  #jung_btn{top:50%; left:35%;}
+
+  /* 서울(동부) 대학 아이콘 */
+  #gyeong_btn{top:7%; left:60%;}
+  #go_btn{top:15%; left:45%;}
+  #gook_btn{top:20%; left:32%;}
+  #dong_btn{top:43%; left:30%;}
+  #sungsin_btn{top:38%; left:50%;}
+  #han_btn{top:47%; left:40%;}
+
+  #modu_btn{top:27%; left:42%;}
+  #univfemi_btn{top:43%; left:60%;}
+
+  #inc_btn{top:15%; left:30%;}
+  #inha_btn{top:46%; left:58%;}
+
+  #yeonw_btn{top:35%; left:50%;}
+}
+
+@media screen and (max-width:767px){
+  *{
+    cursor:none;
+  }
+  /* 마우스 커서 */
+  #cursor {
+   position: absolute;
+   width: 30px;
+   height: 30px;
+   left: -100px;
+   cursor: none;
+   pointer-events: none;
+   z-index: 3000;
+  }
+  #audio_div{display:none;}
+
+  #wrap{width:100%; height:100%;}
+  #wrap > h1{font-size:0;}
+  header .logo_box{position:absolute; padding:20px 0px 0px 20px;}
+  header .logo_box img{position:absolute; height:50px; z-index:15;}
+  /* #wrap header{position:absolute;width:100%; height:70px; left:0px; top:0px; z-index:1; background-color:#19034E;} */
+  #container{width:100%; height:100%; z-index:3;}
+  #wrap footer{width:100%; height:50px; position:fixed; left:0px; bottom:0px; z-index:9;}
+  #wrap footer ul{height:100%; width: 100%; display:flex; flex-direction:row; justify-content:flex-end; padding-top:0;}
+  #wrap footer ul li{margin-right:10px;}
+  #wrap footer ul li:last-child{margin-right:20px;}
+  #wrap footer p{position:absolute; margin-top:-20px; left:20px;bottom:20px; font-size:0.6rem; z-index:7; display:inline-block; color:#432884;}
+
+  #background{width:100%; height:100%; z-index:5;}
+  #content{
+    position:absolute; height:100%; width:100%; top:0px; left:0px; padding-top:70px;
+    padding-bottom:70px; z-index:7; overflow-y:auto; text-align:center;}
+  #content #main_map{height:600px; width:520px; z-index:11;padding-top:20px;}
+  #content #nav{position:absolute; width:520px; height:600px; top:50%; left:50%; margin-top:-300px; margin-left:-260px;}
+  #content #nav nav{width:100%; height:100%;}
+  #content #nav nav ul li{display:inline-block;}
+  #content #compass_btn{position:absolute; width:180px; height:180px; top:20px; right:20px; z-index:13;}
+  #wseoul_btn{position:absolute; top:37%; right:50%;}
+  #eseoul_btn{position:absolute; top:25%; right:74%;}
+  #universal_btn{position:absolute; top:52%; right:35%;}
+  #gangwon_btn{position:absolute; top:73%; right:35%;}
+  #incheon_btn{position:absolute; top:78%; right:75%;}
+
+  #compass_modal{
+    position:absolute; z-index:1000;
+    width:100%; height:100%;
+    background:rgba(0,0,0,0.8);
+    top:0; left:0;
+    display:none;
+  }
+  #compass_content{
+    width:350px; height:500px;
+    background:rgba(0,0,0,0); border-radius:10px;
+    position:relative; top:50%; left:50%;
+    margin-top:-250px; margin-left:-175px;
+    text-align:center; box-sizing:border-box; padding:auto 0;
+    line-height:23px;
+  }
+  #compass_content #text_compass{width:760px; height:auto; display:none;}
+  #text_compass_mobile{width:350px; height:auto; display:inline-block;}
+  #compass_text {display:none;}
+  #compass_modal .close_btn{position:absolute; top:87%; left:50%;
+    width:100px; height:25px; line-height:15px; border-radius:7px;
+    font-size:0.7rem; display:inline-block;
+    z-index:13; margin-left:-50px;
+  }
+
+  .wrap_btn {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .content_btn {
+    width: 97.5px;
+    height: 30px;
+    font-family: '맑은고딕';
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 8.5px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    outline: none;
+    }
+    #wseoul_btn{background-color:#F2CA5A;}
+    #eseoul_btn{background-color:#1BAF10;}
+    #universal_btn{background-color:#456CCE;}
+    #gangwon_btn{background-color:#F47A69;}
+    #incheon_btn{background-color:#FC2A15;}
+
+  .content_btn:hover {
+    background-color: #432884;
+    box-shadow: 0px 15px 20px rgba(30, 18, 68, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+
+  .area_modal{
+    position:absolute; z-index:1001;
+    width:100%; height:100%;
+    background:rgba(0,0,0,0.8);
+    top:0; left:0;
+    display:none;
+  }
+  .area_content{
+    width:288px; height:400px;
+    background:rgba(0,0,0,0); border-radius:10px;
+    position:relative; top:50%; left:50%;
+    margin-top:-200px; margin-left:-144px;
+    box-sizing:border-box;
+    line-height:23px;
+    text-align:center;
+    z-index:9;
+  }
+  .area_content img{z-index:10;width:288px; height:400px;margin-left:0;}
+  .area_content ul {position:absolute; width:100%; height:100%; top:80px; left:0px; z-index:11;}
+  .area_content ul li{display:inline-block;}
+  .area_modal .close_btn{
+    position:fixed; top:20px; right:20px;
+    width:80px; height:20px; line-height:15px; border-radius:7px;
+    font-size:0.8rem; display:inline-block;
+    z-index:13;
+  }
+
+  .univ_modal{
+    position:absolute; z-index:1002;
+    width:100%; height:100%;
+    background:rgba(0,0,0,1);
+    top:0; left:0;
+    display:none;
+  }
+  .univ_modal .univ_content{
+    width:315px; height:450px;
+    background:#fff; border-radius:10px;
+    position:relative; top:50%; left:50%;
+    margin-top:-225px; margin-left:-157.5px;
+    box-sizing:border-box; padding:0 0 10px 0;
+    line-height:23px;
+    text-align:center;
+    z-index:15;
+    overflow-y:auto;
+    overflow-x:hidden;
+  }
+
+  .univ_content > div{width:315px; height:30px; font-size:0.5rem; padding-top:5px;}
+  .univ_content table tr td{width:315px; margin-bottom:10px; vertical-align: middle; text-align: center;}
+  .univ_content table tr td a img{width:80px; height:80px; margin:5px 0 5px 10px; float:left;}
+  .univ_content table tr td h1{width:215px; height:80px; display:inline-block; margin-top:5px; margin-right:10px; padding-top:20px; font-size:18px; line-height:1.2;}
+  .univ_content table tr td h1 strong{font-size:20px;}
+  .univ_content table tr td .short_name{padding-top:30px;}
+  .univ_content table tr td .long_name{font-size:14px;}
+  .univ_content table tr td .long_name_mobile{font-size:16px;}
+  .univ_content table tr td #go01_name{font-size:16px;}
+  .univ_content table tr td #son_name strong{font-size:20px;}
+  .univ_content table tr td #femigo_name{font-size:14px; padding-top:10px;}
+  .univ_content table tr td #femigo_name strong{font-size:20px;}
+  .univ_content table tr td #modu_name{padding-top:30px;}
+  .univ_content table tr td p{width:315px; height:165px; padding: 0 10px; font-size:0.7rem; text-align:justify; line-height:1.4;}
+  .univ_content table tr td .long_text{height:200px;}
+  .univ_content table tr .table_number{display:none;}
+  .univ_content table tr th{display:none;}
+  .univ_content table tr td #sook02_text strong{letter-spacing:-0.03rem;}
+  .univ_content table tr td #dong01_text strong{letter-spacing: -0.03rem}
+  .univ_content table tr td #sungsin01_text strong{letter-spacing: -0.03rem}
+  .univ_modal .close_btn{
+    position:absolute; top:90%; left:50%;
+    width:100px; height:25px; line-height:15px; border-radius:7px;
+    margin-left:-50px;
+    font-size:0.7rem; display:inline-block;
+    z-index:17;
+  }
+
+  #wseoul_content ul li img, #eseoul_content ul li img, #universal_content ul li img,
+  #incheon_content ul li img, #gangwon_content ul li img{width:40px; height:80px; position:absolute;}
+  /* 서울(서부) 대학 아이콘 */
+  #seoul_btn{top:-10%; left:40%;}
+  #sung_btn{top:20%; left:28%;}
+  #sook_btn{top:15%; left:50%;}
+  #yeons_btn{top:-5%; left:75%;}
+  #ehwa_btn{top:30%; left:12%;}
+  #jung_btn{top:40%; left:32%;}
+
+  /* 서울(동부) 대학 아이콘 */
+  #gyeong_btn{top:0%; left:69%;}
+  #go_btn{top:3%; left:52%;}
+  #gook_btn{top:1%; left:32%;}
+  #dong_btn{top:30%; left:27%;}
+  #sungsin_btn{top:24%; left:50%;}
+  #han_btn{top:35%; left:40%;}
+
+  #modu_btn{top:14%; left:42%;}
+  #univfemi_btn{top:33%; left:60%;}
+
+  #inc_btn{top:5%; left:30%;}
+  #inha_btn{top:30%; left:58%;}
+
+  #yeonw_btn{top:20%; left:50%;}
+}
+
+@media screen and (max-width:414px){
+  *{
+    cursor:none;
+  }
+  /* 마우스 커서 */
+  #cursor {
+   position: absolute;
+   width: 30px;
+   height: 30px;
+   left: -100px;
+   cursor: none;
+   pointer-events: none;
+   z-index: 3000;
+  }
+  #audio_div{display:none;}
+
+  #wrap{width:100%; height:100%;}
+  #wrap > h1{font-size:0;}
+  header .logo_box{position:absolute; padding:20px 0px 0px 20px;}
+  header .logo_box img{position:absolute; height:50px; z-index:15;}
+  /* #wrap header{position:absolute;width:100%; height:70px; left:0px; top:0px; z-index:1; background-color:#19034E;} */
+  #container{width:100%; height:100%; z-index:3;}
+  #wrap footer{width:100%; height:50px; position:fixed; left:0px; bottom:0px; z-index:9;}
+  #wrap footer ul{height:100%; width: 100%; display:flex; flex-direction:row; justify-content:flex-end; padding-top:0;}
+  #wrap footer ul li{margin-right:10px;}
+  #wrap footer ul li:last-child{margin-right:20px;}
+  #wrap footer p{position:absolute; margin-top:-20px; left:20px;bottom:20px; font-size:0.6rem; z-index:7; display:inline-block; color:#432884;}
+
+  #background{width:100%; height:100%; z-index:5;}
+  #content{
+    position:absolute; height:100%; width:100%; top:0px; left:0px; padding-top:70px;
+    padding-bottom:70px; z-index:7; overflow-y:auto; text-align:center;}
+  #content #main_map{height:560px; width:400px; padding-top:20px; position:absolute; top:50%; left:50%; margin-top:-280px; margin-left:-200px; z-index:1;}
+  #content #nav{position:absolute; width:400px; height:560px; top:50%; left:50%; margin-top:-280px; margin-left:-200px; z-index:11;}
+  #content #nav nav{width:100%; height:100%;}
+  #content #nav nav ul li{display:inline-block;}
+  #content #compass_btn{position:absolute; width:120px; height:120px; top:20px; right:20px; z-index:13;}
+  #wseoul_btn{position:absolute; top:32%; right:50%;}
+  #eseoul_btn{position:absolute; top:22%; right:71%;}
+  #universal_btn{position:absolute; top:50%; right:29%;}
+  #gangwon_btn{position:absolute; top:67%; right:31%;}
+  #incheon_btn{position:absolute; top:72%; right:70%;}
+
+  #compass_modal{
+    position:absolute; z-index:1000;
+    width:100%; height:100%;
+    background:rgba(0,0,0,0.8);
+    top:0; left:0;
+    display:none;
+  }
+  #compass_content{
+    width:350px; height:500px;
+    background:rgba(0,0,0,0); border-radius:10px;
+    position:relative; top:50%; left:50%;
+    margin-top:-250px; margin-left:-175px;
+    text-align:center; box-sizing:border-box; padding:auto 0;
+    line-height:23px;
+  }
+  #compass_content #text_compass{width:760px; height:auto; display:none;}
+  #text_compass_mobile{width:350px; height:auto; display:inline-block;}
+  #compass_text {display:none;}
+  #compass_modal .close_btn{position:absolute; top:87%; left:50%;
+    width:100px; height:25px; line-height:15px; border-radius:7px;
+    font-size:0.7rem; display:inline-block;
+    z-index:13; margin-left:-50px;
+  }
+
+  .wrap_btn {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .content_btn {
+    width: 97.5px;
+    height: 30px;
+    font-family: '맑은고딕';
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 8.5px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    outline: none;
+    }
+    #wseoul_btn{background-color:#F2CA5A;}
+    #eseoul_btn{background-color:#1BAF10;}
+    #universal_btn{background-color:#456CCE;}
+    #gangwon_btn{background-color:#F47A69;}
+    #incheon_btn{background-color:#FC2A15;}
+
+  .content_btn:hover {
+    background-color: #432884;
+    box-shadow: 0px 15px 20px rgba(30, 18, 68, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+
+  .area_modal{
+    position:absolute; z-index:1001;
+    width:100%; height:100%;
+    background:rgba(0,0,0,0.8);
+    top:0; left:0;
+    display:none;
+  }
+  .area_content{
+    width:288px; height:400px;
+    background:rgba(0,0,0,0); border-radius:10px;
+    position:relative; top:50%; left:50%;
+    margin-top:-200px; margin-left:-144px;
+    box-sizing:border-box;
+    line-height:23px;
+    text-align:center;
+    z-index:9;
+  }
+  .area_content img{z-index:10;width:288px; height:400px;margin-left:0;}
+  .area_content ul {position:absolute; width:100%; height:100%; top:80px; left:0px; z-index:11;}
+  .area_content ul li{display:inline-block;}
+  .area_modal .close_btn{
+    position:fixed; top:20px; right:20px;
+    width:80px; height:20px; line-height:15px; border-radius:7px;
+    font-size:0.8rem; display:inline-block;
+    z-index:13;
+  }
+
+  .univ_modal{
+    position:absolute; z-index:1002;
+    width:100%; height:100%;
+    background:rgba(0,0,0,1);
+    top:0; left:0;
+    display:none;
+  }
+  .univ_modal .univ_content{
+    width:315px; height:450px;
+    background:#fff; border-radius:10px;
+    position:relative; top:50%; left:50%;
+    margin-top:-225px; margin-left:-157.5px;
+    box-sizing:border-box; padding:0 0 10px 0;
+    line-height:23px;
+    text-align:center;
+    z-index:15;
+    overflow-y:auto;
+    overflow-x:hidden;
+  }
+
+  .univ_content > div{width:315px; height:30px; font-size:0.5rem; padding-top:5px;}
+  .univ_content table tr td{width:315px; margin-bottom:10px; vertical-align: middle; text-align: center;}
+  .univ_content table tr td a img{width:80px; height:80px; margin:5px 0 5px 10px; float:left;}
+  .univ_content table tr td h1{width:215px; height:80px; display:inline-block; margin-top:5px; margin-right:10px; padding-top:20px; font-size:18px; line-height:1.2;}
+  .univ_content table tr td h1 strong{font-size:20px;}
+  .univ_content table tr td .short_name{padding-top:30px;}
+  .univ_content table tr td .long_name{font-size:14px;}
+  .univ_content table tr td .long_name_mobile{font-size:16px;}
+  .univ_content table tr td #go01_name{font-size:16px;}
+  .univ_content table tr td #son_name strong{font-size:20px;}
+  .univ_content table tr td #femigo_name{font-size:14px; padding-top:10px;}
+  .univ_content table tr td #femigo_name strong{font-size:20px;}
+  .univ_content table tr td #modu_name{padding-top:30px;}
+  .univ_content table tr td p{width:315px; height:160px; padding: 0 10px; font-size:0.7rem; text-align:justify; line-height:1.6;}
+  .univ_content table tr td .long_text{height:180px;}
+  .univ_content table tr .table_number{display:none;}
+  .univ_content table tr th{display:none;}
+  .univ_content table tr td #sook02_text strong{letter-spacing:-0.03rem;}
+  .univ_content table tr td #dong01_text strong{letter-spacing: -0.03rem}
+  .univ_content table tr td #sungsin01_text strong{letter-spacing: -0.03rem}
+  .univ_modal .close_btn{
+    position:absolute; top:87%; left:50%;
+    width:100px; height:25px; line-height:15px; border-radius:7px;
+    margin-left:-50px; margin-top:-12.5px;
+    font-size:0.7rem; display:inline-block;
+    z-index:17;
+  }
+
+  #wseoul_content ul li img, #eseoul_content ul li img, #universal_content ul li img,
+  #incheon_content ul li img, #gangwon_content ul li img{width:40px; height:80px; position:absolute;}
+  /* 서울(서부) 대학 아이콘 */
+  #seoul_btn{top:-10%; left:40%;}
+  #sung_btn{top:20%; left:28%;}
+  #sook_btn{top:15%; left:50%;}
+  #yeons_btn{top:-5%; left:75%;}
+  #ehwa_btn{top:30%; left:12%;}
+  #jung_btn{top:40%; left:32%;}
+
+  /* 서울(동부) 대학 아이콘 */
+  #gyeong_btn{top:0%; left:69%;}
+  #go_btn{top:3%; left:52%;}
+  #gook_btn{top:1%; left:32%;}
+  #dong_btn{top:30%; left:24%;}
+  #sungsin_btn{top:25%; left:50%;}
+  #han_btn{top:35%; left:35%;}
+
+  #modu_btn{top:14%; left:42%;}
+  #univfemi_btn{top:33%; left:60%;}
+
+  #inc_btn{top:5%; left:30%;}
+  #inha_btn{top:30%; left:58%;}
+
+  #yeonw_btn{top:20%; left:50%;}
+}
+
+@media screen and (max-width:384px){
+  *{
+    cursor:none;
+  }
+  /* 마우스 커서 */
+  #cursor {
+   position: absolute;
+   width: 30px;
+   height: 30px;
+   left: -100px;
+   cursor: none;
+   pointer-events: none;
+   z-index: 3000;
+  }
+  #audio_div{display:none;}
+
+  #wrap{width:100%; height:100%;}
+  #wrap > h1{font-size:0;}
+  header .logo_box{position:absolute; padding:20px 0px 0px 20px;}
+  header .logo_box img{position:absolute; height:50px; z-index:15;}
+  /* #wrap header{position:absolute;width:100%; height:70px; left:0px; top:0px; z-index:1; background-color:#19034E;} */
+  #container{width:100%; height:100%; z-index:3;}
+  #wrap footer{width:100%; height:50px; position:fixed; left:0px; bottom:0px; z-index:9;}
+  #wrap footer ul{height:100%; width: 100%; display:flex; flex-direction:row; justify-content:flex-end; padding-top:0;}
+  #wrap footer ul li{margin-right:10px;}
+  #wrap footer ul li:last-child{margin-right:20px;}
+  #wrap footer p{position:absolute; margin-top:-20px; left:20px;bottom:20px; font-size:0.6rem; z-index:7; display:inline-block; color:#432884;}
+
+  #background{width:100%; height:100%; z-index:5;}
+  #content{
+    position:absolute; height:100%; width:100%; top:0px; left:0px; padding-top:70px;
+    padding-bottom:70px; z-index:7; overflow-y:auto; text-align:center;}
+  #content #main_map{height:500px; width:360px; z-index:11; padding-top:20px; position:absolute; top:50%; left:50%; margin-top:-250px; margin-left:-180px; z-index:1;}
+  #content #nav{position:absolute; width:360px; height:500px; top:50%; left:50%; margin-top:-250px; margin-left:-180px; z-index:11;}
+  #content #nav nav{width:100%; height:100%;}
+  #content #nav nav ul li{display:inline-block;}
+  #content #compass_btn{position:absolute; width:120px; height:120px; top:20px; right:20px; z-index:13;}
+  #wseoul_btn{position:absolute; top:33%; right:50%;}
+  #eseoul_btn{position:absolute; top:22%; right:71%;}
+  #universal_btn{position:absolute; top:48%; right:29%;}
+  #gangwon_btn{position:absolute; top:66%; right:31%;}
+  #incheon_btn{position:absolute; top:71%; right:70%;}
+
+  #compass_modal{
+    position:absolute; z-index:1000;
+    width:100%; height:100%;
+    background:rgba(0,0,0,0.8);
+    top:0; left:0;
+    display:none;
+  }
+  #compass_content{
+    width:350px; height:500px;
+    background:rgba(0,0,0,0); border-radius:10px;
+    position:relative; top:50%; left:50%;
+    margin-top:-250px; margin-left:-175px;
+    text-align:center; box-sizing:border-box; padding:auto 0;
+    line-height:23px;
+  }
+  #compass_content #text_compass{width:760px; height:auto; display:none;}
+  #text_compass_mobile{width:350px; height:auto; display:inline-block;}
+  #compass_text {display:none;}
+  #compass_modal .close_btn{position:absolute; top:87%; left:50%;
+    width:100px; height:25px; line-height:15px; border-radius:7px;
+    font-size:0.7rem; display:inline-block;
+    z-index:13; margin-left:-50px;
+  }
+
+  .wrap_btn {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .content_btn {
+    width: 97.5px;
+    height: 30px;
+    font-family: '맑은고딕';
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 8.5px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    outline: none;
+    }
+    #wseoul_btn{background-color:#F2CA5A;}
+    #eseoul_btn{background-color:#1BAF10;}
+    #universal_btn{background-color:#456CCE;}
+    #gangwon_btn{background-color:#F47A69;}
+    #incheon_btn{background-color:#FC2A15;}
+
+  .content_btn:hover {
+    background-color: #432884;
+    box-shadow: 0px 15px 20px rgba(30, 18, 68, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+
+  .area_modal{
+    position:absolute; z-index:1001;
+    width:100%; height:100%;
+    background:rgba(0,0,0,0.8);
+    top:0; left:0;
+    display:none;
+  }
+  .area_content{
+    width:288px; height:400px;
+    background:rgba(0,0,0,0); border-radius:10px;
+    position:relative; top:50%; left:50%;
+    margin-top:-200px; margin-left:-144px;
+    box-sizing:border-box;
+    line-height:23px;
+    text-align:center;
+    z-index:9;
+  }
+  .area_content img{z-index:10;width:288px; height:400px;margin-left:0;}
+  .area_content ul {position:absolute; width:100%; height:100%; top:80px; left:0px; z-index:11;}
+  .area_content ul li{display:inline-block;}
+  .area_modal .close_btn{
+    position:fixed; top:20px; right:20px;
+    width:80px; height:20px; line-height:15px; border-radius:7px;
+    font-size:0.8rem; display:inline-block;
+    z-index:13;
+  }
+
+  .univ_modal{
+    position:absolute; z-index:1002;
+    width:100%; height:100%;
+    background:rgba(0,0,0,1);
+    top:0; left:0;
+    display:none;
+  }
+  .univ_modal .univ_content{
+    width:315px; height:450px;
+    background:#fff; border-radius:10px;
+    position:relative; top:50%; left:50%;
+    margin-top:-225px; margin-left:-157.5px;
+    box-sizing:border-box; padding:0 0 10px 0;
+    line-height:23px;
+    text-align:center;
+    z-index:15;
+    overflow-y:auto;
+    overflow-x:hidden;
+  }
+
+  .univ_content > div{width:315px; height:30px; font-size:0.5rem; padding-top:5px;}
+  .univ_content table tr td{width:315px; margin-bottom:10px; vertical-align: middle; text-align: center;}
+  .univ_content table tr td a img{width:80px; height:80px; margin:5px 0 5px 10px; float:left;}
+  .univ_content table tr td h1{width:215px; height:80px; display:inline-block; margin-top:5px; margin-right:10px; padding-top:20px; font-size:18px; line-height:1.2;}
+  .univ_content table tr td h1 strong{font-size:20px;}
+  .univ_content table tr td .short_name{padding-top:30px;}
+  .univ_content table tr td .long_name{font-size:14px;}
+  .univ_content table tr td .long_name_mobile{font-size:16px;}
+  .univ_content table tr td #go01_name{font-size:16px;}
+  .univ_content table tr td #son_name strong{font-size:20px;}
+  .univ_content table tr td #femigo_name{font-size:14px; padding-top:10px;}
+  .univ_content table tr td #femigo_name strong{font-size:20px;}
+  .univ_content table tr td #modu_name{padding-top:30px;}
+  .univ_content table tr td p{width:315px; height:160px; padding: 0 10px; font-size:0.7rem; text-align:justify; line-height:1.6;}
+  .univ_content table tr td .long_text{height:180px;}
+  .univ_content table tr .table_number{display:none;}
+  .univ_content table tr th{display:none;}
+  .univ_content table tr td #sook02_text strong{letter-spacing:-0.03rem;}
+  .univ_content table tr td #dong01_text strong{letter-spacing: -0.03rem}
+  .univ_content table tr td #sungsin01_text strong{letter-spacing: -0.03rem}
+  .univ_modal .close_btn{
+    position:absolute; top:90%; left:50%;
+    width:100px; height:25px; line-height:15px; border-radius:7px;
+    margin-left:-50px;
+    font-size:0.7rem; display:inline-block;
+    z-index:17;
+  }
+
+  #wseoul_content ul li img, #eseoul_content ul li img, #universal_content ul li img,
+  #incheon_content ul li img, #gangwon_content ul li img{width:40px; height:80px; position:absolute;}
+  /* 서울(서부) 대학 아이콘 */
+  #seoul_btn{top:-10%; left:40%;}
+  #sung_btn{top:20%; left:28%;}
+  #sook_btn{top:15%; left:50%;}
+  #yeons_btn{top:-5%; left:75%;}
+  #ehwa_btn{top:30%; left:12%;}
+  #jung_btn{top:40%; left:32%;}
+
+  /* 서울(동부) 대학 아이콘 */
+  #gyeong_btn{top:0%; left:69%;}
+  #go_btn{top:3%; left:52%;}
+  #gook_btn{top:1%; left:32%;}
+  #dong_btn{top:24%; left:30%;}
+  #sungsin_btn{top:25%; left:50%;}
+  #han_btn{top:35%; left:40%;}
+
+  #modu_btn{top:14%; left:42%;}
+  #univfemi_btn{top:33%; left:60%;}
+
+  #inc_btn{top:5%; left:30%;}
+  #inha_btn{top:30%; left:58%;}
+
+  #yeonw_btn{top:20%; left:50%;}
+}
+
+@media screen and (max-width:320px){
+  *{
+    cursor:none;
+  }
+  /* 마우스 커서 */
+  #cursor {
+   position: absolute;
+   width: 30px;
+   height: 30px;
+   left: -100px;
+   cursor: none;
+   pointer-events: none;
+   z-index: 3000;
+  }
+  #audio_div{display:none;}
+
+  #wrap{width:100%; height:100%;}
+  #wrap > h1{font-size:0;}
+  header .logo_box{position:absolute; padding:20px 0px 0px 20px;}
+  header .logo_box img{position:absolute; height:50px; z-index:15;}
+  /* #wrap header{position:absolute;width:100%; height:70px; left:0px; top:0px; z-index:1; background-color:#19034E;} */
+  #container{width:100%; height:100%; z-index:3;}
+  #wrap footer{width:100%; height:50px; position:fixed; left:0px; bottom:0px; z-index:9;}
+  #wrap footer ul{height:100%; width: 100%; display:flex; flex-direction:row; justify-content:flex-end; padding-top:10px;}
+  #wrap footer ul li{margin-right:7px;}
+  #wrap footer ul li:last-child{margin-right:20px;}
+  #wrap footer ul li img{width:20px; height:20px;}
+  #wrap footer p{position:absolute; margin-top:-20px; left:20px;bottom:20px; font-size:0.4rem; z-index:7; display:inline-block; color:#432884;}
+
+  #background{width:100%; height:100%; z-index:5;}
+  #content{
+    position:absolute; height:100%; width:100%; top:0px; left:0px; padding-top:70px;
+    padding-bottom:70px; z-index:7; overflow-y:auto; text-align:center;}
+  #content #main_map{height:460px; width:320px; z-index:11; padding-top:20px; position:absolute; top:50%; left:50%; margin-top:-230px; margin-left:-160px; z-index:1;}
+  #content #nav{position:absolute; width:320px; height:460px; top:50%; left:50%; margin-top:-230px; margin-left:-160px; z-index:11;}
+  #content #nav nav{width:100%; height:100%;}
+  #content #nav nav ul li{display:inline-block;}
+  #content #compass_btn{position:absolute; width:120px; height:120px; top:20px; right:20px; z-index:13;}
+  #wseoul_btn{position:absolute; top:33%; right:50%;}
+  #eseoul_btn{position:absolute; top:22%; right:71%;}
+  #universal_btn{position:absolute; top:48%; right:29%;}
+  #gangwon_btn{position:absolute; top:66%; right:31%;}
+  #incheon_btn{position:absolute; top:71%; right:70%;}
+
+  #compass_modal{
+    position:absolute; z-index:1000;
+    width:100%; height:100%;
+    background:rgba(0,0,0,0.8);
+    top:0; left:0;
+    display:none;
+  }
+  #compass_content{
+    width:320px; height:400px;
+    background:rgba(0,0,0,0); border-radius:10px;
+    position:relative; top:50%; left:50%;
+    margin-top:-200px; margin-left:-160px;
+    text-align:center; box-sizing:border-box; padding:auto 0;
+    line-height:23px;
+  }
+  #compass_content #text_compass{width:760px; height:auto; display:none;}
+  #text_compass_mobile{width:320px; height:auto; display:inline-block;}
+  #compass_text {display:none;}
+  #compass_modal .close_btn{position:absolute; top:87%; left:50%;
+    width:100px; height:25px; line-height:15px; border-radius:7px;
+    font-size:0.7rem; display:inline-block;
+    z-index:13; margin-left:-50px;
+  }
+
+  .wrap_btn {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .content_btn {
+    width: 73.125px;
+    height: 22.5px;
+    font-family: '맑은고딕';
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    outline: none;
+    }
+    #wseoul_btn{background-color:#F2CA5A;}
+    #eseoul_btn{background-color:#1BAF10;}
+    #universal_btn{background-color:#456CCE;}
+    #gangwon_btn{background-color:#F47A69;}
+    #incheon_btn{background-color:#FC2A15;}
+
+  .content_btn:hover {
+    background-color: #432884;
+    box-shadow: 0px 15px 20px rgba(30, 18, 68, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+
+  .area_modal{
+    position:absolute; z-index:1001;
+    width:100%; height:100%;
+    background:rgba(0,0,0,0.8);
+    top:0; left:0;
+    display:none;
+  }
+  .area_content{
+    width:288px; height:400px;
+    background:rgba(0,0,0,0); border-radius:10px;
+    position:relative; top:50%; left:50%;
+    margin-top:-200px; margin-left:-144px;
+    box-sizing:border-box;
+    line-height:23px;
+    text-align:center;
+    z-index:9;
+  }
+  .area_content img{z-index:10;width:288px; height:400px;margin-left:0;}
+  .area_content ul {position:absolute; width:100%; height:100%; top:80px; left:0px; z-index:11;}
+  .area_content ul li{display:inline-block;}
+  .area_modal .close_btn{
+    position:fixed; top:20px; right:20px;
+    width:80px; height:20px; line-height:15px; border-radius:7px;
+    font-size:0.8rem; display:inline-block;
+    z-index:13;
+  }
+
+  .univ_modal{
+    position:absolute; z-index:1002;
+    width:100%; height:100%;
+    background:rgba(0,0,0,1);
+    top:0; left:0;
+    display:none;
+  }
+  .univ_modal .univ_content{
+    width:315px; height:450px;
+    background:#fff; border-radius:10px;
+    position:relative; top:50%; left:50%;
+    margin-top:-225px; margin-left:-157.5px;
+    box-sizing:border-box; padding:0 0 10px 0;
+    line-height:23px;
+    text-align:center;
+    z-index:15;
+    overflow-y:auto;
+    overflow-x:hidden;
+  }
+
+  .univ_content > div{width:315px; height:30px; font-size:0.5rem; padding-top:5px;}
+  .univ_content table tr td{width:315px; margin-bottom:10px; vertical-align: middle; text-align: center;}
+  .univ_content table tr td a img{width:80px; height:80px; margin:5px 0 5px 10px; float:left;}
+  .univ_content table tr td h1{width:215px; height:80px; display:inline-block; margin-top:5px; margin-right:10px; padding-top:20px; font-size:18px; line-height:1.2;}
+  .univ_content table tr td h1 strong{font-size:20px;}
+  .univ_content table tr td .short_name{padding-top:30px;}
+  .univ_content table tr td .long_name{font-size:14px;}
+  .univ_content table tr td .long_name_mobile{font-size:16px;}
+  .univ_content table tr td #go01_name{font-size:16px;}
+  .univ_content table tr td #son_name strong{font-size:20px;}
+  .univ_content table tr td #femigo_name{font-size:14px; padding-top:10px;}
+  .univ_content table tr td #femigo_name strong{font-size:20px;}
+  .univ_content table tr td #modu_name{padding-top:30px;}
+  .univ_content table tr td p{width:315px; height:160px; padding: 0 10px; font-size:0.7rem; text-align:justify; line-height:1.6;}
+  .univ_content table tr td .long_text{height:180px;}
+  .univ_content table tr .table_number{display:none;}
+  .univ_content table tr th{display:none;}
+  .univ_content table tr td #sook02_text strong{letter-spacing:-0.03rem;}
+  .univ_content table tr td #dong01_text strong{letter-spacing: -0.03rem}
+  .univ_content table tr td #sungsin01_text strong{letter-spacing: -0.03rem}
+  .univ_modal .close_btn{
+    position:absolute; top:95%; left:50%;
+    width:100px; height:25px; line-height:15px; border-radius:7px;
+    margin-left:-50px;
+    font-size:0.7rem; display:inline-block;
+    z-index:17;
+  }
+
+  #wseoul_content ul li img, #eseoul_content ul li img, #universal_content ul li img,
+  #incheon_content ul li img, #gangwon_content ul li img{width:40px; height:80px; position:absolute;}
+  /* 서울(서부) 대학 아이콘 */
+  #seoul_btn{top:-10%; left:40%;}
+  #sung_btn{top:20%; left:28%;}
+  #sook_btn{top:15%; left:50%;}
+  #yeons_btn{top:-5%; left:75%;}
+  #ehwa_btn{top:30%; left:12%;}
+  #jung_btn{top:40%; left:32%;}
+
+  /* 서울(동부) 대학 아이콘 */
+  #gyeong_btn{top:0%; left:69%;}
+  #go_btn{top:3%; left:52%;}
+  #gook_btn{top:1%; left:32%;}
+  #dong_btn{top:24%; left:30%;}
+  #sungsin_btn{top:25%; left:50%;}
+  #han_btn{top:35%; left:40%;}
+
+  #modu_btn{top:14%; left:42%;}
+  #univfemi_btn{top:33%; left:60%;}
+
+  #inc_btn{top:5%; left:30%;}
+  #inha_btn{top:30%; left:58%;}
+
+  #yeonw_btn{top:20%; left:50%;}
+}
+
+@media screen and (max-width:280px){
+  *{
+    cursor:none;
+  }
+  /* 마우스 커서 */
+  #cursor {
+   position: absolute;
+   width: 30px;
+   height: 30px;
+   left: -100px;
+   cursor: none;
+   pointer-events: none;
+   z-index: 3000;
+  }
+  #audio_div{display:none;}
+
+  #wrap{width:100%; height:100%;}
+  #wrap > h1{font-size:0;}
+  header .logo_box{position:absolute; padding:20px 0px 0px 20px;}
+  header .logo_box img{position:absolute; height:50px; z-index:15;}
+  /* #wrap header{position:absolute;width:100%; height:70px; left:0px; top:0px; z-index:1; background-color:#19034E;} */
+  #container{width:100%; height:100%; z-index:3;}
+  #wrap footer{width:100%; height:50px; position:fixed; left:0px; bottom:0px; z-index:9;}
+  #wrap footer ul{height:100%; width: 100%; display:flex; flex-direction:row; justify-content:flex-end; padding-top:10px;}
+  #wrap footer ul li{margin-right:7px;}
+  #wrap footer ul li:last-child{margin-right:20px;}
+  #wrap footer ul li img{width:20px; height:20px;}
+  #wrap footer p{position:absolute; width:180px; margin-top:-35px; left:20px;bottom:20px; font-size:0.4rem; z-index:7; display:inline-block; color:#432884;}
+
+  #background{width:100%; height:100%; z-index:5;}
+  #content{
+    position:absolute; height:100%; width:100%; top:0px; left:0px; padding-top:70px;
+    padding-bottom:70px; z-index:7; overflow-y:auto; text-align:center;}
+  #content #main_map{height:460px; width:320px; z-index:11; padding-top:20px; position:absolute; top:50%; left:50%; margin-top:-230px; margin-left:-160px; z-index:1; padding-left:10px;}
+  #content #nav{position:absolute; width:320px; height:460px; top:50%; left:50%; margin-top:-230px; margin-left:-160px; z-index:11;}
+  #content #nav nav{width:100%; height:100%;}
+  #content #nav nav ul li{display:inline-block;}
+  #content #compass_btn{position:fixed; width:100px; height:100px; top:20px; right:20px; z-index:13;}
+  #wseoul_btn{position:absolute; top:33%; right:50%;}
+  #eseoul_btn{position:absolute; top:22%; right:69%;}
+  #universal_btn{position:absolute; top:48%; right:29%;}
+  #gangwon_btn{position:absolute; top:66%; right:31%;}
+  #incheon_btn{position:absolute; top:71%; right:67%;}
+
+  #compass_modal{
+    position:absolute; z-index:1000;
+    width:100%; height:100%;
+    background:rgba(0,0,0,0.8);
+    top:0; left:0;
+    display:none;
+  }
+  #compass_content{
+    width:320px; height:400px;
+    background:rgba(0,0,0,0); border-radius:10px;
+    position:relative; top:50%; left:50%;
+    margin-top:-200px; margin-left:-160px;
+    text-align:center; box-sizing:border-box; padding:auto 0;
+    line-height:23px;
+  }
+  #compass_content #text_compass{width:760px; height:auto; display:none;}
+  #text_compass_mobile{width:320px; height:auto; display:inline-block;}
+  #compass_text {display:none;}
+  #compass_modal .close_btn{position:absolute; top:87%; left:50%;
+    width:100px; height:25px; line-height:15px; border-radius:7px;
+    font-size:0.7rem; display:inline-block;
+    z-index:13; margin-left:-50px;
+  }
+
+  .wrap_btn {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .content_btn {
+    width: 73.125px;
+    height: 22.5px;
+    font-family: '맑은고딕';
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    outline: none;
+    }
+    #wseoul_btn{background-color:#F2CA5A;}
+    #eseoul_btn{background-color:#1BAF10;}
+    #universal_btn{background-color:#456CCE;}
+    #gangwon_btn{background-color:#F47A69;}
+    #incheon_btn{background-color:#FC2A15;}
+
+  .content_btn:hover {
+    background-color: #432884;
+    box-shadow: 0px 15px 20px rgba(30, 18, 68, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+
+  .area_modal{
+    position:absolute; z-index:1001;
+    width:100%; height:100%;
+    background:rgba(0,0,0,0.8);
+    top:0; left:0;
+    display:none;
+  }
+  .area_content{
+    width:288px; height:400px;
+    background:rgba(0,0,0,0); border-radius:10px;
+    position:relative; top:50%; left:50%;
+    margin-top:-200px; margin-left:-144px;
+    box-sizing:border-box;
+    line-height:23px;
+    text-align:center;
+    z-index:9;
+  }
+  .area_content img{z-index:10;width:288px; height:400px;margin-left:0;}
+  .area_content ul {position:absolute; width:100%; height:100%; top:80px; left:0px; z-index:11;}
+  .area_content ul li{display:inline-block;}
+  .area_modal .close_btn{
+    position:fixed; top:20px; right:20px;
+    width:80px; height:20px; line-height:15px; border-radius:7px;
+    font-size:0.8rem; display:inline-block;
+    z-index:13;
+  }
+
+  .univ_modal{
+    position:absolute; z-index:1002;
+    width:100%; height:100%;
+    background:rgba(0,0,0,1);
+    top:0; left:0;
+    display:none;
+  }
+  .univ_modal .univ_content{
+    width:280px; height:400px;
+    background:#fff; border-radius:10px;
+    position:relative; top:50%; left:50%;
+    margin-top:-200px; margin-left:-140px;
+    box-sizing:border-box; padding:0 0 10px 0;
+    line-height:23px;
+    text-align:center;
+    z-index:15;
+    overflow-y:auto;
+    overflow-x:hidden;
+  }
+
+  .univ_content > div{width:280px; height:30px; font-size:0.5rem; padding-top:5px;}
+  .univ_content table tr td{width:280px; margin-bottom:10px; vertical-align: middle; text-align: center;}
+  .univ_content table tr td a img{width:60px; height:60px; margin:5px 0 5px 10px; float:left;}
+  .univ_content table tr td h1{width:200px; height:60px; display:inline-block; margin-top:5px; margin-right:10px; padding-top:7px; font-size:18px; line-height:1.2;}
+  .univ_content table tr td h1 strong{font-size:20px;}
+  .univ_content table tr td .short_name{padding-top:20px;}
+  .univ_content table tr td .long_name{font-size:12px;}
+  .univ_content table tr td .long_name_mobile{font-size:14px;}
+  .univ_content table tr td #go01_name{font-size:16px;}
+  .univ_content table tr td #sung01_name{font-size:14px;}
+  .univ_content table tr td #son_name strong{font-size:20px;}
+  .univ_content table tr td #femigo_name{font-size:14px; padding-top:2px;}
+  .univ_content table tr td #femigo_name strong{font-size:20px;}
+  .univ_content table tr td #modu_name{padding-top:15px;}
+  .univ_content table tr td p{width:280px; height:160px; padding: 0 10px; font-size:0.7rem; text-align:justify; line-height:1.6;}
+  .univ_content table tr td .long_text{height:220px;}
+  .univ_content table tr .table_number{display:none;}
+  .univ_content table tr th{display:none;}
+  .univ_content table tr td #sook02_text strong{letter-spacing:-0.03rem;}
+  .univ_content table tr td #dong01_text strong{letter-spacing: -0.03rem}
+  .univ_content table tr td #sungsin01_text strong{letter-spacing: -0.03rem}
+  .univ_modal .close_btn{
+    position:absolute; top:95%; left:50%;
+    width:100px; height:25px; line-height:15px; border-radius:7px;
+    margin-left:-50px;
+    font-size:0.7rem; display:inline-block;
+    z-index:17;
+  }
+
+  #wseoul_content ul li img, #eseoul_content ul li img, #universal_content ul li img,
+  #incheon_content ul li img, #gangwon_content ul li img{width:40px; height:80px; position:absolute;}
+  /* 서울(서부) 대학 아이콘 */
+  #seoul_btn{top:-10%; left:40%;}
+  #sung_btn{top:20%; left:28%;}
+  #sook_btn{top:15%; left:50%;}
+  #yeons_btn{top:-5%; left:75%;}
+  #ehwa_btn{top:30%; left:12%;}
+  #jung_btn{top:40%; left:32%;}
+
+  /* 서울(동부) 대학 아이콘 */
+  #gyeong_btn{top:0%; left:69%;}
+  #go_btn{top:3%; left:52%;}
+  #gook_btn{top:1%; left:32%;}
+  #dong_btn{top:24%; left:30%;}
+  #sungsin_btn{top:25%; left:50%;}
+  #han_btn{top:35%; left:40%;}
+
+  #modu_btn{top:14%; left:42%;}
+  #univfemi_btn{top:33%; left:60%;}
+
+  #inc_btn{top:5%; left:30%;}
+  #inha_btn{top:30%; left:58%;}
+
+  #yeonw_btn{top:20%; left:50%;}
+}
