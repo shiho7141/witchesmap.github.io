@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>범우주마녀OT 맵사이트</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+  <!-- 전화, 주소, 이메일 자동 링크 없앨 때 -->
+  <!--<meta name="format-detection" content="telephone=no, address=no, email=no" />-->
+  <!-- 기본 포맷 삭제 -->
+  <!--<meta name="format-detection" content="no" />-->
+  <meta name="title"  property="og:title" content="범우주마녀OT 맵사이트">
+  <meta name="images" property="og:image" content="./images/">
+  <meta name="description" property="og:description" content="범우주마녀OT 맵사이트">
+  <meta name="type" property="og:type" content="website">
+  <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery-migrate-3.3.2.js"></script>
+  <script type="text/javascript" src="js/ui.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="./css/ui.css">
+  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <div id="audio_div">
+    <audio autoplay="autoplay" loop="loop" preload="auto">
+      <source src="bgm.mp3" type="audio/mp3">
+    </audio>
+  </div>
+<section id="wrap">
+  <h1>범우주마녀OT 맵사이트</h1>
+  <header>
+    <img src="./images/cursor.png" alt="마우스 커서" id="cursor">
+    <strong class="logo_box"><a href="https://univfemi.campaignus.me/" target="_blank"><image src="./images/mainLogo.png" alt="유니브페미"></a></strong>
+  </header>
+  <section id="container">
+    <img src="./images/background.png" id="background">
+    <div id="content">
+      <img src="./images/map_main.png" alt="범우주마녀지도" id="main_map">
+      <img src="./images/compass.png" id="compass_btn">
+      <div id="nav">
+        <nav>
+          <ul>
+            <!-- 지역별 버튼 위치 재지정 필요 -->
+            <li><div class="wrap_btn"><button class="content_btn" id="wseoul_btn">서울&#40;서부&#41;</button></div></li>
+            <li><div class="wrap_btn"><button class="content_btn" id="eseoul_btn">서울&#40;동부&#41;</button></div></li>
+            <li><div class="wrap_btn"><button class="content_btn" id="universal_btn">범대학</button></div></li>
+            <li><div class="wrap_btn"><button class="content_btn" id="incheon_btn">인천</button></div></li>
+            <li><div class="wrap_btn"><button class="content_btn" id="gangwon_btn">강원</button></div></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div id="compass_modal">
+      <div id="compass_content">
+        <img src="./images/text_compass.png" alt="범우주마녀지도 제작 취지" id="text_compass">
+        <img src="./images/text_compass_mobile.png" alt="범우주마녀지도 제작 취지 모바일용" id="text_compass_mobile">
+        <p id="compass_text"> 비대면 학기가 계속되는 2021년 상반기, 대학에 관한 정보를 얻을 수 있는 곳이 온라인 커뮤니티뿐인 상황이 지속되고 있다.
+        에브리타임을 비롯한 대학 온라인 커뮤니티는 페미니즘 및 소수자 의제와 관련한 글이라면 무차별로 신고하여 삭제하는 마녀사냥의 장이다.
+        이로 인해 신입생 페미니스트들은 자신이 재학하고 있는 대학에 동료 마녀가 있는 것도 알지 못한 채 숨죽여 살아갈 위기에 처해 있다.
+        이에 범우주마녀협회는 협회 내의 페미니즘 단체를 소개하는 범우주마녀지도를 배포한다.
+        범우주마녀지도를 통해 학내 페미니즘 단체와 신입생 페미니스트들이 만나 무궁한 영광과 안녕을 누릴 수 있기를 기원한다. 2021.03.06.</p>
+        <button class="close_btn">닫기</button>
+      </div>
+    </div>
+    <div class="area_modal" id="wseoul_modal">
+      <div class="area_content" id="wseoul_content">
+        <img src="./images/map_wseoul.png" alt="서울 서부 소재 범우주마녀협회 가입단위 지도">
+        <ul>
+          <li><img src="./images/btn/btn_seoul.png" alt="서울대 아이콘" class="univ_btn" id="seoul_btn"></li>
+          <li><img src="./images/btn/btn_sung.png" alt="성균관대 아이콘" class="univ_btn" id="sung_btn"></li>
+          <li><img src="./images/btn/btn_sook.png" alt="숙명여대 아이콘" class="univ_btn" id="sook_btn"></li>
+          <li><img src="./images/btn/btn_yeons.png" alt="연세대 서울캠 아이콘" class="univ_btn" id="yeons_btn"></li>
+          <li><img src="./images/btn/btn_ehwa.png" alt="이화여대 아이콘" class="univ_btn" id="ehwa_btn"></li>
+          <li><img src="./images/btn/btn_jung.png" alt="중앙대 아이콘" class="univ_btn" id="jung_btn"></li>
+        </ul>
+        <button class="close_btn">닫기</button>
+      </div>
+    </div>
+    <div class="modal_container">
+      <div class="univ_modal" id="seoul_univ">
+        <div class="univ_content" id="seoul_content">
+          <div>※각 단위의 로고 클릭 시 단위의 sns로 이동합니다.</div>
+          <table>
+            <tr>
+              <th>번호</th>
+              <th>단위 로고 및 소개</th>
+            </tr>
+            <tr>
+              <td rowspan="2" class="table_number">1</td>
+              <td><a href="http://facebook.com/lalunefeminist" target="_blank"><img src="./images/logo/logo_seoul01.png" alt="관악 여성주의 학회 달 로고"></a>
+                <h1>관악 여성주의 학회<br><strong>달</strong></h1>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>안녕하세요! 저희는 2013년부터 서울대 전체를 대상으로 활동해 온 페미니스트 모임인 <strong>'관악 여성주의 학회 달'</strong>이라고 합니다.
+                초기에는 사회대 여성주의자 모임으로서 페미니즘 텍스트를 학습하고 여성주의적 실천을 이어온 달은 서울대 내부의 페미니즘 가시화를 주도하며 어떤 페미니즘을 지향하는 것이 필요할지 치열하게 고민해 왔습니다.
+                현재는 동아리연합회 산하 중앙동아리로서 정기 세미나, 문집 발행 등 내부 정기사업과 외부 연대활동을 진행하는 동시에 학내 페미니스트들의 안전하고 포괄적인 네트워킹 거점을 지향하고 있습니다.
+                어느 단과대에 속해 있든, 성 정체성/성적 지향, 국적, 나이와 무관하게 달은 모든 다양한 구성원을 환영합니다.</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <button class="close_btn">지도로 돌아가기</button>
+      </div>
+      <div class="univ_modal" id="sung_univ">
+        <div class="univ_content" id="sung_content">
+          <div>※각 단위의 로고 클릭 시 단위의 sns로 이동합니다.</div>
+          <table>
+            <tr>
+              <th>번호</th>
+              <th>단위 로고 및 소개</th>
+            </tr>
+            <tr>
+              <td rowspan="2" class="table_number">1</td>
+              <td><a href="https://m.facebook.com/earlyspring310/?locale2=ko_KR" target="_blank"><img src="./images/logo/logo_sung01.jpg" alt="성균관대학교 사회인문학회 맏봄 로고"></a>
+                <h1 id="sung01_name">성균관대학교 사회인문학회<br><strong>맏봄</strong></h1>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p><strong>사회인문학회 맏봄</strong>은 2015년부터 활동한 성균관대학교 국어국문학과 공식 학회로, 삶과 사회에 대해 공부하며 보다 여성주의적인 공동체를 지향하는 공간입니다.
+                  학회의 이름인 ‘맏봄’은 ‘초봄’의 옛말로서, 더 나은 시대를 고민하며 다가올 봄의 ‘처음’으로 나아가자는 다짐을 담고 있습니다. 맏봄은 나의 삶을 재구축하고 타인의 삶에 가까이 다가가는 자세를 배우는 것을
+                  목표로 하여 매학기 세미나를 진행하고 학내외 활동에 대한 연대를 이어오고 있습니다.</p>
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="2" class="table_number">2</td>
+              <td><a href="https://m.facebook.com/skkuequal/?tsid=0.035862726879930085&source=result" target="_blank"><img src="./images/logo/logo_sung02.png" alt="성균관대학교 장애인권동아리 이퀄 로고"></a>
+                <h1 class="long_name_mobile">성균관대학교 장애인권동아리<br><strong>이퀄</strong></h1>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p><strong>성균관대학교 장애인권 동아리 이퀄</strong>은 장애인권과 관련한 다양항 사업을 이어오고 있습니다. 학내에서는 장애인식 개선 캠페인 및 장애학 세미나를 매년 진행하였고, 외부적으로는
+                  단체 간담회 및 연대 활동을 펼쳤습니다. 올해는 동물권 학회와 같이 세미나를 진행하여 장애해방과 동물해방에 대해 공부하며 교차성을 다룰 예정입니다. 이퀄은 앞으로도 학내외에서 다양한 인권/다양성 의제에 목소리를 내며 연대의 뜻을 보낼 것입니다!</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <button class="close_btn">지도로 돌아가기</button>
+      </div>
+      <div class="univ_modal" id="sook_univ">
+        <div class="univ_content" id="sook_content">
+          <div>※각 단위의 로고 클릭 시 단위의 sns로 이동합니다.</div>
+          <table>
+            <tr>
+              <th>번호</th>
+              <th>단위 로고 및 소개</th>
+            </tr>
+            <tr>
+              <td rowspan="2" class="table_number">1</td>
+              <td><a href="https://instagram.com/smwu_hr?igshid=vvz07m2zujh6" target="_blank"><img src="./images/logo/logo_sook01.png" alt="숙명여자대학교 학생소수자인권위원회 로고"></a>
+                <h1>숙명여자대학교<br>학생소수자인권위원회</h1>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p><strong>숙명여자대학교 학생·소수자인권위원회</strong>는 2019년 출범한 학생자치 단체로 소수자성을 지니는 개인 혹은 집단을 향한 차별과 억압에 적극적으로 저항하고, 모든 구성원의 권익 수호를 위해 행동 및 연대하여 학내외의 전반적인 인식 개선을 목적으로 하고 있습니다. 학소위의 주요 사업으로는 선거운동본부 공개질의서 사업, 인권 관련 기념일을 포스팅 하는 달력 사업, 차별 및 인권침해 제보 및 대응이 있습니다. 이외에도 각 학기별로 뉴스레터, 컬러링북 이벤트, 학소위 스포트라이트 등 다양한 사업을 진행하고 있습니다.</p>
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="2" class="table_number">2</td>
+              <td><a href="https://www.instagram.com/sm_amnesty" target="_blank"><img src="./images/logo/logo_sook02.png" alt="숙명앰네스티 로고"></a>
+                <h1 class="short_name">숙명앰네스티</h1>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                  <p class="long_text" style="margin-bottom:10px;"id="sook02_text"><strong>숙명앰네스티</strong>는 세계 최대 인권단체인 '국제 앰네스티(AMNESTY INTERNATIONAL)'의 정신을 표방하는 동아리입니다. 본회는 국제적으로 대두되는 여성/LGBTI/난민·이주자 등의 이슈를 분석하고, 이에 근거한 활동들을 도모합니다. 본회가 주로 하는 활동은 다음과 같습니다.
+                  첫번째로 정기 세미나를 열어 인권과 관련한 주제로 발제를 들은 후 의제에 대한 의견을 회원들과 여러 가지 논점에서 토의를 나눕니다. 두번째로, 앰네스티의 연간 행사인 인권을 위한 편지 쓰기 '레터 데이(Write for Rights)'를 기획해 매년 12월 '세계인권선언일'에 맞춰 인권 침해자들을 위해 편지를 쓰는 활동을 합니다. 또한, 인권 관련 강연 혹은 행사, 집회에 자율적으로 참여합니다. </p>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <button class="close_btn">지도로 돌아가기</button>
+      </div>
+      <div class="univ_modal" id="yeons_univ">
+        <div class="univ_content" id="yeons_content">
+          <div>※각 단위의 로고 클릭 시 단위의 sns로 이동합니다.</div>
+          <table>
+            <tr>
+              <th>번호</th>
+              <th>단위 로고 및 소개</th>
+            </tr>
+            <tr>
+              <td rowspan="2" class="table_number">1</td>
+              <td><a href="https://www.instagram.com/jado_2012/?igshid=1dgzkl7431hvy" target="_blank"><img src="./images/logo/logo_yeons01.jpg" alt="연세대학교 사회과학 자치도서관 015B 로고" id="yeons01_logo"></a>
+                <h1 class="long_name_mobile">연세대학교 사회과학 자치도서관<br><strong>015B</strong></h1>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p class="long_text" style="margin-bottom:10px;"><b>“여기, 또 다른 언어가 있다”</b><br><strong>연세대학교 사회과학대학 자치도서관 015B</strong>는 학생들이 오랜 토의를 거쳐 스스로 일구어 낸 ‘학생 자치공간’으로, 사회의 ‘주류’가 택한 언어에 담기지 못한 존재와 담론을 고민하고, 외치고, 움직인다는 기조 아래 운영되어 왔습니다.
+                  자치도서관은 추천을 통해 신간도서를 구입하거나 학내 단체에게 공간 대관을 제공하는 일을 주로 하면서, 그 외에도 ‘또 다른 언어’에 대한 사유를 잃지 않기 위한 나름의 노력을 이어왔습니다.
+                  2018년에는 학교 청소노동자 분들과의 대담과 <피해와 가해의 페미니즘> 저자 권김현영 선생님을 초청한 북콘서트를 주최하였으며, 대학 페미 퍼포먼스 <마녀행진>, <그 민주주의는 틀렸다> 등의 행사에 공동주최로 참가하였습니다.</p>
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="2" class="table_number">2</td>
+              <td><a href="https://www.instagram.com/yonseiji/?hl=ko" target="_blank"><img src="./images/logo/logo_yeons02.jpg" alt="연세편집위원회 로고"></a>
+                <h1 class="short_name"><strong>연세편집위원회</strong></h1>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p><strong>『연세』</strong>는 계절마다 한 번씩 발간하는 연세대학교 중앙교지입니다. 계간지의 특성을 살려 긴 호흡을 가지고 곱씹어볼 만한
+               이야기들을 담으려 노력하고 있습니다. 대학 사회와 소수자, 청년 문제 등에 대한 심층적인 문제의식을 취재기사, 에세이, 칼럼 등의 형식으로 풀어내곤 합니다.
+                외부적인 지도나 검열 없이 학생들 스스로 편집권을 가지고 기획부터, 인쇄, 배포까지 책임지는 자율, 독립 언론으로서 이 오랜 시간 동안 굳건하게 버텨왔습니다.</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <button class="close_btn">지도로 돌아가기</button>
+      </div>
+      <div class="univ_modal" id="ehwa_univ">
+        <div class="univ_content" id="ehwa_content">
+          <div>※각 단위의 로고 클릭 시 단위의 sns로 이동합니다.</div>
+          <table>
+            <tr>
+              <th>번호</th>
+              <th>단위 로고 및 소개</th>
+            </tr>
+            <tr>
+              <td rowspan="2" class="table_number">1</td>
+              <td><a href="https://instagram.com/ewharights?igshid=19kekyz5jgwbp" target="_blank"><img src="./images/logo/logo_ehwa01.png" alt="이화여자대학교 학생소수자인권위원회 로고"></a>
+                <h1>이화여자대학교<br>학생소수자인권위원회</h1>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p><strong>이화여자대학교 학생•소수자인권위원회</strong>(이하 학소위)는 본교 모든 재학생의 인권 및 인권침해에 대한 다양한 의견을 학교 본부와 학생 사회 전반에 반영하는 것을 목표로 하는 교내 자치 단위입니다. 학소위에서는 학생과 소수자에 대한 차별•인권침해 대응, 학생•소수자인권 사안에 관한 학내 의견수렴 등 학내 인권 사업 뿐만 아니라 다양한 권리 담론을 사유하고 외부 단체와의 유연한 연대를 통해 사유와 실천의 경계를 허물어 위원들이 사회적 의제에 대한 인식을 확장할 수 있는 공동체를 제공합니다. 그간 학소위에서 진행한 사업으로는 소수자 의제에 대한 세미나, 시의적 주제에 대한 자보 작성, 인권가이드라인 제작 및 배포 등이 있습니다.</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <button class="close_btn">지도로 돌아가기</button>
+      </div>
+      <div class="univ_modal" id="jung_univ">
+        <div class="univ_content" id="jung_content">
+          <div>※각 단위의 로고 클릭 시 단위의 sns로 이동합니다.</div>
+          <table>
+            <tr>
+              <th>번호</th>
+              <th>단위 로고 및 소개</th>
+            </tr>
+            <tr>
+              <td rowspan="2" class="table_number">1</td>
+              <td><a href="https://www.instagram.com/cau_gender/" target="_blank"><img src="./images/logo/logo_jung01.png" alt="중앙대학교 성평등위원회 뿌리 로고"></a>
+                <h1>중앙대학교 성평등위원회<br><strong>뿌리</strong></h1>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p class="long_text"><strong>중앙대학교 성평등위원회</strong>는 학내에 만연한 성차별을 개선하고 성평등한 학생사회를 만들기 위한 다양한 활동을 진행하는 기구입니다.
+                  성평위는 학내 성폭력 피해자들과 연대함과 동시에 학생사회 내외에서 논의될 수 있는 다양한 성평등 의제에 대해 연구하고, 정기 세미나를 통해 이를 학우들에게 소개하며, 다양한 사업들을 통해 학우들이 일상 속에서 성평등 의제를 접하고 실천할 수 있도록 합니다.
+                  ‘뿌리내릴수록 연결되는 우리’ 라는 기조에 걸맞게, 땅 속에서 얽히고 설켜 서로를 연결하고 지탱하는 나무의 뿌리처럼 학우들의 생활 속에 성평등 문화를 뿌리내려 다양한 모습을 가진 학생사회를 연결하고, 지탱하는 기반이 되고자 합니다. </p>
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="2" class="table_number">2</td>
+              <td><a href="https://www.instagram.com/gongjubari/" target="_blank"><img src="./images/logo/logo_jung02.png" alt="중앙대학교 인문대학 페미니즘 동아리 바리 로고"></a>
+                <h1 class="long_name" style="letter-spacing:-0.03rem">중앙대학교 인문대학 페미니즘 동아리<br><strong>바리</strong></h1>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p class="long_text" style="margin-bottom:10px;"><strong>바리</strong>는 중앙대학교 인문대학 페미니즘 동아리입니다. 대학교 안에서 자유롭고 안전하고 즐겁게 페미니즘에 대해 이야기하기 위해, 그리고 인문대 학우들의 울타리, 자리가 되기 위해 만들어졌습니다.
+                바리는 서사무가 '바리데기'로부터 이름을 빌렸습니다. '버려진 딸'로서의 바리는 가부장제로부터 소외된 모든 이들을 뜻합니다. '영웅'으로서의 바리는 여성혐오와 폭력으로부터 맞서 싸우는 이들을 뜻합니다.
+                '영매자'로서의 바리는 서로를 연결하고 연대하는 페미니스트들을 뜻합니다. 우리는 차별과 혐오로 얼룩진 현실을 인식하고 배울 수 있기에 싸울 수 있고, 그럼으로써 연결될 수 있습니다.
+                바리는 오늘도 페미니즘을 공부하고, 이야기하고, 실천하고 있습니다.</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <button class="close_btn">지도로 돌아가기</button>
+      </div>
+    </div>
+    <div class="area_modal" id="eseoul_modal">
+      <div class="area_content" id="eseoul_content">
+      <img src="./images/map_eseoul.png" alt="서울 동부 소재 범우주마녀협회 가입단위 지도">
+        <ul>
+          <li><img src="./images/btn/btn_gyeong.png" alt="경희대 아이콘" class="univ_btn" id="gyeong_btn"></li>
+          <li><img src="./images/btn/btn_go.png" alt="고려대 아이콘" class="univ_btn" id="go_btn"></li>
+          <li><img src="./images/btn/btn_gook.png" alt="국민대 아이콘" class="univ_btn" id="gook_btn"></li>
+          <li><img src="./images/btn/btn_dong.png" alt="동국대 아이콘" class="univ_btn" id="dong_btn"></li>
+          <li><img src="./images/btn/btn_sungsin.png" alt="성신여대 아이콘" class="univ_btn" id="sungsin_btn"></li>
+          <li><img src="./images/btn/btn_han.png" alt="한국외대 아이콘" class="univ_btn" id="han_btn"></li>
+        </ul>
+        <button class="close_btn">닫기</button>
+      </div>
+    </div>
+    <div class="modal_container">
+      <div class="univ_modal" id="gyeong_univ">
+        <div class="univ_content" id="gyeong_content">
+          <div>※각 단위의 로고 클릭 시 단위의 sns로 이동합니다.</div>
+          <table>
+            <tr>
+              <th>번호</th>
+              <th>단위 로고 및 소개</th>
+            </tr>
+            <tr>
+              <td rowspan="2" class="table_number">1</td>
+              <td><a href="https://instagram.com/khu_darimdarim?igshid=f39bhjt02vww" target="_blank"><img src="./images/logo/logo_gyeong01.png" alt="경희대학교 문과대학 성평등위원회 다림 로고"></a>
+                <h1 class="long_name">경희대학교 문과대학 성평등위원회<br><strong>다림</strong></h1>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p class="long_text"><strong>‘다림’</strong>은 경희대학교 문과대학의 성평등 실현, 성폭력 문제 해결, 구성원의 젠더 감수성 증진을 위해 노력하는 학생자치기구입니다.
+                  2018학년도 새내기새로배움터 반성폭력 교육을 시작으로 학내 젠더영화 공동상영회 개최, 젠더이슈(낙태죄, 퀴어) 안내 부스 활동 등을 통해 학우들의 젠더 감수성 함양을 위해 노력해왔습니다.
+                  또, 반성폭력회칙을 제정하여 문과대학 내 부재하던 성폭력 사건 해결 내규 구성에도 힘을 보탰습니다. 이외에도 문대 회장단 선거기간 중 성평등 인식조사 질의서 발송, 성인지 감수성 테스트 빙고 제작 등 활발한 활동을 멈추지 않았습니다.
+                  앞으로도 다림은 다양화 및 체계화 된 활동을 지향하는 성평등위원회를 만들기 위해 노력해나갈 것입니다.</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <button class="close_btn">지도로 돌아가기</button>
+      </div>
+      <div class="univ_modal" id="go_univ">
+        <div class="univ_content" id="go_content">
+          <div>※각 단위의 로고 클릭 시 단위의 sns로 이동합니다.</div>
+          <table>
+            <tr>
+              <th>번호</th>
+              <th>단위 로고 및 소개</th>
+            </tr>
+            <tr>
+              <td rowspan="2" class="table_number">1</td>
+              <td><a href="https://instagram.com/kusoinwee?igshid=6wbrn8lpmyl" target="_blank"><img src="./images/logo/logo_go01.png" alt="고려대학교 소수자인권위원회 로고"></a>
+                <h1 class="short_name" id="go01_name">고려대학교 소수자인권위원회</h1>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p class="long_text"><strong>고려대학교 소수자인권위원회</strong>(이하 소인위)는 상호교차성 개념을 기반으로, 학내외의 소수자 인권을 보장하기 위한 다양한 활동을 진행합니다.
+                  소인위의 가장 주요한 업무는 인권침해사건을 겪은 피해자가 소인위에 도움을 요청했을 시, 피해자 중심주의적인 사건 해결을 위해 함께 연대하며 도움을 드리는 것입니다.
+                  이외에도 매 학기 내부 세미나를 통해 여러 갈래의 인권 사안에 대해 함께 공부하거나 학내 인권의식 제고를 위해 상영회, 강연회와 같은 사업을 겸하고 있습니다.
+                  한 고려대학교 내 다른 여러 인권단체들과 인권이슈에 대한 공론장을 형성하거나, 함께 사업을 기획하기도 합니다.</p>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" class="table_number">2</td>
+              <td><a href="https://instagram.com/ku_feminism" target="_blank"><img src="./images/logo/logo_go02.png" alt="고려대학교 여학생위원회 로고"></a>
+                <h1 class="short_name">고려대학교 여학생위원회</h1>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p class="long_text" style="margin-bottom:30px;"><strong>고려대학교 여학생위원회</strong>는 여성주의를 바탕으로 성원들의 성적(gender) 차이가 차별로 이어지지 않는 공동체를 지향합니다.
+                  이를 위해 여학생위원회는 고려대학교의 각급 단위들이 평등한 공동체가 될 수 있도록 다양한 활동을 진행하고 있으며 학내에서 발생하는 성폭력, 성차별 문제를 실질적으로
+                  해결하는데 주력합니다. 구체적으로 여성주의와 젠더에 대해 논의하며, 성폭력 상담 및 대응, 여성주의 세미나와 강연회 주최, 여성해방제, 재생산권 관련 생리대 지원,
+                  학내 여성 노동자와의 연대, 에타 내 혐오발언 대응과 같은 사업을 기획하고 있습니다. 우리, 여러 결의 페미니스트들이 여위에 모여 마음 속 작은 소란을 사회를 바꾸는 파장으로
+                  함께 만들어 나갑시다. 여학생위원회 인스타그램과 페이스북 페이지를 방문해주세요!</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <button class="close_btn">지도로 돌아가기</button>
+      </div>
+      <div class="univ_modal" id="gook_univ">
+        <div class="univ_content" id="gook_content">
+          <div>※각 단위의 로고 클릭 시 단위의 sns로 이동합니다.</div>
+          <table>
+            <tr>
+              <th>번호</th>
+              <th>단위 로고 및 소개</th>
+            </tr>
+            <tr>
+              <td rowspan="2" class="table_number">1</td>
+              <td><a href="https://www.facebook.com/KMU.exit/" target="_blank"><img src="./images/logo/logo_gook01.png" alt="실천하는 국민대 학생모임 비상구 로고"></a>
+                <h1>실천하는 국민대 학생모임<br><strong>비상구</strong></h1>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>착취와 차별의 시대, 평등의 대안을 찾기 위해 토론하고 실천하는 국민대 유일한 동아리!</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <button class="close_btn">지도로 돌아가기</button>
+      </div>
+      <div class="univ_modal" id="dong_univ">
+        <div class="univ_content" id="dong_content">
+          <div>※각 단위의 로고 클릭 시 단위의 sns로 이동합니다.</div>
+          <table>
+            <tr>
+              <th>번호</th>
+              <th>단위 로고 및 소개</th>
+            </tr>
+            <tr>
+              <td rowspan="2" class="table_number">1</td>
+              <td><a href="https://www.facebook.com/going.femiho/" target="_blank"><img src="./images/logo/logo_dong01.png" alt="동국대학교 북한학과 페미니즘 소모임 고잉페미호 로고"></a>
+                <h1 class="long_name" style="letter-spacing:-0.03rem;">동국대학교 북한학과 페미니즘 소모임<br><strong>고잉페미호</strong></h1>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p class="long_text"><strong>고잉페미호</strong>는 여자다움/남자다움이라는 이분법적인 성 고정관념에서 벗어나, 어떠한 하나의 정체성만으로 규정할 수 없는 ‘나다움’을 찾는 것을 목표로 하고 있는 동국대학교 북한학과 내의 소모임입니다. 성소수자, 장애인, 환경, 동물, 노인, 노동자 등 사회의 수많은 존재들이 가지고 있는 교차적인, 다양한 정체성에 주목하고 있습니다. 또한 북한학과에 속한 소모임인만큼 페미니즘과 북한학이 교차할 수 있는 범위에서 북한이탈주민이나 난민문제 등과 같이 분단체제 안에서 주변화되거나 사소한 것으로 치부되는 소수자들과 관련한 문제에도 주목하고자 합니다. 이렇듯 고잉페미호의 모든 선원들은 ‘당연한 것’으로 통용되는 지식을 상대화하고, 다양한 존재들과 연대할 수 있는 방법에 대해 고민합니다.</p>
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="2" class="table_number">2</td>
+              <td><a href="https://instagram.com/departing_femi" target="_blank"><img src="./images/logo/logo_dong02.png" alt="동국대학교 사회학과 여성주의 학회 일탈페미 로고"></a>
+                <h1 class="long_name">동국대학교 사회학과 여성주의 학회<br><strong>일탈페미</strong></h1>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p style="margin-bottom:40px;">동국대학교 사회학과 최초의 <strong>여성주의 학술 소모임 일탈페미</strong>입니다. 저희는 매 학기마다 논의를 거쳐 책을 선정하고,
+                  이를 읽고 회원들의 다양한 생각을 같이 나누고 고민을 해결해나가는 활동을 하고 있습니다. 소모임에 속하지 않은 다른 학우들도 참여할 수 있는
+                  오픈세미나와 영화 상영회 등을 개최하거나 퀴어 퍼레이드, 마녀행진과 같은 행사에 참가하는 등 동국대학교 내부 페미니즘의 대중화와 누구도
+                  차별받지 않는 사회를 위해 힘쓰고자 합니다. 2018년에 신설되어 지금까지 활발한 활동을 이어가고 있는 일탈페미는 더 나은 세상, 더 행복한
+                  세상을 위해 끊임없이 고민하고 있습니다.</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <button class="close_btn">지도로 돌아가기</button>
+      </div>
+      <div class="univ_modal" id="sungsin_univ">
+        <div class="univ_content" id="sungsin_content">
+          <div>※각 단위의 로고 클릭 시 단위의 sns로 이동합니다.</div>
+          <table>
+            <tr>
+              <th>번호</th>
+              <th>단위 로고 및 소개</th>
+            </tr>
+            <tr>
+              <td rowspan="2" class="table_number">1</td>
+              <td><a href="https://www.instagram.com/sungshin_rights/" target="_blank"><img src="./images/logo/logo_sungsin01.png" alt="성신여자대학교 학생소수자인권위원회 로고"></a>
+                <h1>성신여자대학교<br>학생소수자인권위원회</h1>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p id="sungsin01_text"><strong>성신여자대학교 학생·소수자인권위원회</strong>는 학내외의 권리침해 사안에 연대하고, 소수자를 향한 낙인과 차별에 저항하며,
+                  소수자를 배제하는 장벽을 허물기 위해 행동하는 등 인권 향상에 기여하는 특별기구입니다.</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <button class="close_btn">지도로 돌아가기</button>
+      </div>
+      <div class="univ_modal" id="han_univ">
+        <div class="univ_content" id="han_content">
+          <div>※각 단위의 로고 클릭 시 단위의 sns로 이동합니다.</div>
+          <table>
+            <tr>
+              <th>번호</th>
+              <th>단위 로고 및 소개</th>
+            </tr>
+            <tr>
+              <td rowspan="2" class="table_number">1</td>
+              <td><a href="https://instagram.com/hufsjudi" target="_blank"><img src="./images/logo/logo_han01.png" alt="한국외국어대학교 여성주의학회 주디 로고"></a>
+                <h1 class="long_name_mobile">한국외국어대학교 여성주의학회<br><strong>주디</strong></h1>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>2013년 시작된 <strong>여성주의 학회 주디</strong>는 독서 세미나를 중심으로 다양한 페미니즘 담론을 논하고 공유하는 모임입니다.
+                  ‘주디’라는 이름에는 억압에 대해 거침없이 ‘주디(주둥이)’를 놀리고자 하는 의지와 여성주의 철학자 ‘주디’스 버틀러에 대한 오마주가 담겨 있습니다.
+                  매 학기 다른 커리큘럼으로 활동을 진행하며, 회원들의 의견을 반영해 주제를 결정합니다. 외대 서울캠퍼스를 거점으로 하고 있지만, 외대생 외에도 타대생,
+                  대학생이 아닌 사람 모두 세미나를 참관하고 회원이 될 수 있습니다. 주디에 대해 더 알고 싶으시다면 주디 SNS 계정(인스타그램, 페이스북, 트위터 @hufsjudi)으로 연락 부탁드립니다!</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <button class="close_btn">지도로 돌아가기</button>
+      </div>
+    </div>
+    <div class="area_modal" id="universal_modal">
+      <div class="area_content" id="universal_content">
+        <img src="./images/map_universal.png" alt="범대학 소재 범우주마녀협회 가입단위 지도">
+          <ul>
+            <li><img src="./images/btn/btn_modu.png" alt="모두의 페미니즘 아이콘" class="univ_btn" id="modu_btn"></li>
+            <li><img src="./images/btn/btn_univfemi.png" alt="유니브페미 아이콘" class="univ_btn" id="univfemi_btn"></li>
+          </ul>
+        <button class="close_btn">닫기</button>
+      </div>
+    </div>
+    <div class="modal_container">
+      <div class="univ_modal" id="modu_univ">
+        <div class="univ_content" id="modu_content">
+          <div>※각 단위의 로고 클릭 시 단위의 sns로 이동합니다.</div>
+          <table>
+            <tr>
+              <th>번호</th>
+              <th>단위 로고 및 소개</th>
+            </tr>
+            <tr>
+              <td rowspan="2" class="table_number">1</td>
+              <td><a href="https://m.facebook.com/modufeminism/" target="_blank"><img src="./images/logo/logo_modu.png" alt="모두의페미니즘 로고"></a>
+                <h1 id="modu_name"><strong>모두의페미니즘</strong></h1>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p><strong>모두의페미니즘</strong>은 페미니즘 리부트를 대학 안에서도 이어나가기 위해 2018년에 만들어졌습니다. 모두의페미니즘은 노동, 환경, 국제정세, 대학 등의 문제와
+                  여성문제가 교차된다는 인식을 가지고 캠퍼스 안에서 함께 공부하고 행동합니다. 지금은 건국대학교, 홍익대학교, 동부(경희대학교, 서울과학기술대학교, 서울여자대학교 등),
+                  연합지부(동부지부를 제외한 학교)로 운영되고 있습니다.
+                  여러 학교의 페미니스트들과 함께 안전한 공간에서 페미니즘에 대해 공부하고 토론하고 실천하고 싶은 대학생들을 기다리고 있습니다.</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <button class="close_btn">지도로 돌아가기</button>
+      </div>
+      <div class="univ_modal" id="univfemi_univ">
+        <div class="univ_content" id="univfemi_content">
+          <div>※각 단위의 로고 클릭 시 단위의 sns로 이동합니다.</div>
+          <table>
+            <tr>
+              <th>번호</th>
+              <th>단위 로고 및 소개</th>
+            </tr>
+            <tr>
+              <td rowspan="2" class="table_number">1</td>
+              <td><a href="https://univfemi.campaignus.me/" target="_blank"><img src="./images/logo/logo_univfemi.png" alt="대학 페미니스트 공동체 유니브페미 로고"></a>
+                <h1>대학 페미니스트 공동체<br><strong>유니브페미</strong></h1>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p><strong>대학 페미니스트 공동체 유니브페미</strong>는 개별 대학의 경계를 넘어 대학 간의 지속가능한 연대를 지향하며 여성을 비롯한 소수자의 자유와 평등을 이룩하는 것을
+                  목표로 합니다. 대학 성평등 제도 현황 연구와 대학 온라인 커뮤니티 혐오표현 대응 F5 프로젝트를 통해 대학 공간의 의제를 발굴하고, 독서 세미나와 페미니스트 캠프를 통해
+                  대학 페미니스트들이 함께 고민을 나누는 자리를 만듭니다. 대학 안팎에서 일어나는 일에 긴밀하게 연대하면서도 끊임없이 재미있고 흥미로운 기획을 상상합니다. 더 평등한 대학,
+                  더 즐거운 페미니즘, 더 다양한 관계를 만들어가는 유니브페미와 함께 해주세요! 홈페이지를 통해 회원 가입을 할 수 있습니다.</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <button class="close_btn">지도로 돌아가기</button>
+      </div>
+    </div>
+    <div class="area_modal" id="incheon_modal">
+      <div class="area_content" id="incheon_content">
+        <img src="./images/map_incheon.png" alt="인천 소재 범우주마녀협회 가입단위 지도">
+          <ul>
+            <li><img src="./images/btn/btn_inc.png" alt="인천대 아이콘" class="univ_btn" id="inc_btn"></li>
+            <li><img src="./images/btn/btn_inha.png" alt="인하대 아이콘" class="univ_btn" id="inha_btn"></li>
+          </ul>
+        <button class="close_btn">닫기</button>
+      </div>
+    </div>
+    <div class="modal_container">
+      <div class="univ_modal" id="inc_univ">
+        <div class="univ_content" id="inc_content">
+          <div>※각 단위의 로고 클릭 시 단위의 sns로 이동합니다.</div>
+          <table>
+            <tr>
+              <th>번호</th>
+              <th>단위 로고 및 소개</th>
+            </tr>
+            <tr>
+              <td rowspan="2" class="table_number">1</td>
+              <td><a href="https://instagram.com/inu_genjang?igshid=1utwky23hj5g7" target="_blank"><img src="./images/logo/logo_inc01.png" alt="인천대학교 페미니즘 모임 젠장 로고"></a>
+                <h1>인천대학교 페미니즘 모임<br><strong>젠장</strong></h1>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p><strong>젠장</strong>은 인천대학교 페미니즘 동아리로 함께 페미니즘을 공부하고 실천하고 있습니다.
+                  주로 독서 세미나 활동을 하며 성명 / 입장문 발표도 하고 있습니다. 외부 연대 활동으로는 인천대 A교수 대책 위원회 , 비정규직 없는 인천대 만들기 공동행동,
+                  인천차별금지법제정연대, 대학 내 권력형 성폭력 해결을 위한 대학가 공동 대응 등이 있습니다.</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <button class="close_btn">지도로 돌아가기</button>
+      </div>
+      <div class="univ_modal" id="inha_univ">
+        <div class="univ_content" id="inha_content">
+          <div>※각 단위의 로고 클릭 시 단위의 sns로 이동합니다.</div>
+          <table>
+            <tr>
+              <th>번호</th>
+              <th>단위 로고 및 소개</th>
+            </tr>
+            <tr>
+              <td rowspan="2" class="table_number">1</td>
+              <td><a href="https://www.instagram.com/in__ferno/" target="_blank"><img src="./images/logo/logo_inha01.png" alt="인하대학교 페미니즘 동아리 인페르노 로고"></a>
+                <h1>인하대학교 페미니즘 동아리<br><strong>인페르노</strong></h1>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p><strong>인하대학교 페미니즘 동아리 인페르노</strong>입니다. 인페르노는 #사회적 소수자에 연대 #트랜스젠더 차별 반대 #모두와 함께하는 페미니즘을 기본 입장으로
+                  삼고 있습니다. 2019 인천 페미니즘 페스티벌, 2019 인천 퀴어 문화 축제에 참가했으며 2019년 학내 페미니즘 부스를 운영했습니다. 동아리 내 독서 세미나, 영화 수다회,
+                  주제 발표회(동물권, 성소수자 인권, 노동자 인권) 등의 활동을 통해 여성인권을 비롯한 인권문제를 폭넓게 다루며 자유롭게 토론합니다.</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <button class="close_btn">지도로 돌아가기</button>
+      </div>
+    </div>
+    <div class="area_modal" id="gangwon_modal">
+      <div class="area_content" id="gangwon_content">
+        <img src="./images/map_gangwon.png" alt="강원 소재 범우주마녀협회 가입단위 지도">
+          <ul>
+            <li><img src="./images/btn/btn_yeonw.png" alt="연세대 원주캠 아이콘" class="univ_btn" id="yeonw_btn"></li>
+          </ul>
+        <button class="close_btn">닫기</button>
+      </div>
+    </div>
+    <div class="modal_container">
+      <div class="univ_modal" id="yeonw_univ">
+        <div class="univ_content" id="yeonw_content">
+          <div>※각 단위의 로고 클릭 시 단위의 sns로 이동합니다.</div>
+          <table>
+            <tr>
+              <th>번호</th>
+              <th>단위 로고 및 소개</th>
+            </tr>
+            <tr>
+              <td rowspan="2" class="table_number">1</td>
+              <td><a href="https://instagram.com/y.m.feminism?igshid=1sq1f4h7kj7ef" target="_blank"><img src="./images/logo/logo_yeonw01.png" alt="연세대학교 미래캠퍼스 독서 소모임 손깍지 로고"></a>
+                <h1 class="long_name" id="son_name">연세대학교 미래캠퍼스 독서 소모임<br><strong>손깍지</strong></h1>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p style="height:160px;">2016년에 탄생한 <strong>연세대학교 미래캠퍼스 독서 소모임 손깍지</strong>!
+                손깍지에서는요, 한 학기에 1-2권 정도의 페미니즘 책을 읽고 이야기를 나눕니다.
+                책 읽기 외에도 학교에서 필요한 여성주의 활동을 기획하고 있어요. 회원은 상시모집 중! 손깍지는 차별에 반대하고
+                언제나 공부하는 마음으로 다양한 사람들의 의견을 들어요. 페미니즘에 관심이 있는 여러분의 연대를 기다리고 있을게요.</p>
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="2" class="table_number">2</td>
+              <td><a href="https://www.instagram.com/femigo_2018/" target="_blank"><img src="./images/logo/logo_yeonw02.png" alt="연세대학교 미래캠퍼스 페미니즘 학술소모임 페미고 로고"></a>
+                <h1 id="femigo_name">연세대학교 미래캠퍼스<br>페미니즘 학술소모임<br><strong>페미고</strong></h1>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p class="long_text" style="height:220px;">안녕하세요, <strong>연세대학교 미래캠퍼스 페미니즘 학술소모임 페미고</strong>입니다.
+                  2018년 캠퍼스 내 여성 연대를 도모하기 위해 만들어진 페미고는 누구나 쉽게 시작할 수 있는 낮은 문턱의 페미니즘을 지향하고 있습니다.
+                  학기 중 정기 모임에서는 페미니즘 관련 개인 연구와 발제 및 토론, 그리고 영화 감상 및 보드 게임 등의 친목 활동을 진행하고 있으며, 이 외에도 회원분들이 원하는 다양한 활동을 기획 준비 중입니다.
+                  페미니즘에 관심이 있는 연세대 미래캠 여성학우라면 나이, 학번, 학과, 지향하는 노선 상관 없이 상시 환영하고 있으니 부담없이 편하게 연락주세요!</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <button class="close_btn">지도로 돌아가기</button>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <ul id="sns_icon">
+      <!-- hover시 이미지는 파일명에 _on 붙일 것 -->
+      <!-- 휴대폰 화면 최적화 필요 -->
+      <li>
+        <a href="https://twitter.com/univfemi" title="트위터로 이동"><img src="./images/sns/twitter.png" alt="유니브페미 트위터 바로가기 아이콘"></a>
+      </li>
+      <li>
+        <a href="https://instagram.com/univfemi" title="인스타그램으로 이동"><img src="./images/sns/instagram.png"
+          alt="유니브페미 인스타그램 바로가기 아이콘"></a>
+      </li>
+      <li>
+        <a href="https://facebook.com/univfemi" title="페이스북으로 이동"><img src="./images/sns/facebook.png" alt="유니브페미 페이스북
+          바로가기 아이콘"></a>
+      </li>
+    </ul>
+    <p>Copyright(c) UNIVFEMI All Rights Reserved<br>문의 univfemi@gmail.com</p>
+  </footer>
+</section>
+</body>
+</html>
