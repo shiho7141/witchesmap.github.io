@@ -193,7 +193,7 @@ html,body{overflow:hidden;height:100%;}
     position:absolute; top:96%; left:50%; margin-top:-15px;
     width:120px; height:30px; line-height:15px; border-radius:7px;
     margin-left:-60px;
-    font-size:0.8rem; display:inline-block;
+    font-size:0.7rem; display:inline-block;
     z-index:17; background-color:#fff;
   }
 
@@ -348,8 +348,8 @@ html,body{overflow:hidden;height:100%;}
   .area_content ul li{display:inline-block;}
   .area_modal .close_btn{
     position:fixed; top:40px; right:40px;
-    width:180px; height:45px; line-height:15px; border-radius:9px;
-    font-size:1.5rem; display:inline-block;
+    width:120px; height:30px; line-height:15px; border-radius:7px;
+    font-size:0.9rem; display:inline-block;
     z-index:13; background-color:#fff;
   }
 
@@ -377,7 +377,7 @@ html,body{overflow:hidden;height:100%;}
     position:absolute; top:92%; left:50%;
     width:120px; height:30px; line-height:15px; border-radius:7px;
     margin-left:-60px;
-    font-size:0.8rem; display:inline-block;
+    font-size:0.9rem; display:inline-block;
     z-index:17;
   }
 
@@ -402,7 +402,7 @@ html,body{overflow:hidden;height:100%;}
     position:absolute; top:75%; left:50%;
     width:180px; height:45px; line-height:15px; border-radius:9px;
     margin-left:-90px;
-    font-size:1.0rem; display:inline-block;
+    font-size:0.9rem; display:inline-block;
     z-index:17; background-color:#fff;
   }
 
@@ -558,8 +558,8 @@ html,body{overflow:hidden;height:100%;}
   .area_content ul li{display:inline-block;}
   .area_modal .close_btn{
     position:fixed; top:40px; right:40px;
-    width:180px; height:45px; line-height:15px; border-radius:9px;
-    font-size:1.5rem; display:inline-block;
+    width:120px; height:30px; line-height:15px; border-radius:7px;
+    font-size:0.9rem; display:inline-block;
     z-index:13; background-color:#fff;
   }
 
@@ -604,7 +604,7 @@ html,body{overflow:hidden;height:100%;}
     position:absolute; top:85%; left:50%;
     width:180px; height:45px; line-height:15px; border-radius:9px;
     margin-left:-90px;
-    font-size:1rem; display:inline-block;
+    font-size:0.9rem; display:inline-block;
     z-index:17; background-color:#fff;
   }
 
@@ -697,9 +697,9 @@ html,body{overflow:hidden;height:100%;}
   #text_compass_mobile{width:350px; height:auto; display:inline-block;}
   #compass_text {display:none;}
   #compass_modal .close_btn{position:absolute; top:87%; left:50%;
-    width:100px; height:25px; line-height:15px; border-radius:7px;
-    font-size:0.7rem; display:inline-block;
-    z-index:13; margin-left:-50px; background-color:#fff;
+    width:120px; height:30px; line-height:15px; border-radius:7px;
+    font-size:0.9rem; display:inline-block;
+    z-index:13; margin-left:-60px; background-color:#fff;
   }
 
   .wrap_btn {
@@ -759,8 +759,8 @@ html,body{overflow:hidden;height:100%;}
   .area_content ul li{display:inline-block;}
   .area_modal .close_btn{
     position:fixed; top:20px; right:20px;
-    width:80px; height:20px; line-height:15px; border-radius:7px;
-    font-size:0.8rem; display:inline-block;
+    width:120px; height:30px; line-height:15px; border-radius:7px;
+    font-size:0.9rem; display:inline-block;
     z-index:13; background-color:#fff;
   }
 
@@ -806,8 +806,8 @@ html,body{overflow:hidden;height:100%;}
   .univ_content table tr td #sungsin01_text strong{letter-spacing: -0.03rem}
   .univ_modal .close_btn{
     position:absolute; top:93%; left:50%;
-    width:100px; height:25px; line-height:15px; border-radius:7px;
-    margin-left:-50px;
+    width:120px; height:30px; line-height:15px; border-radius:7px;
+    margin-left:-60px;
     font-size:0.7rem; display:inline-block;
     z-index:17; background-color:#fff;
   }
@@ -901,9 +901,9 @@ html,body{overflow:hidden;height:100%;}
   #text_compass_mobile{width:350px; height:auto; display:inline-block;}
   #compass_text {display:none;}
   #compass_modal .close_btn{position:absolute; top:87%; left:50%;
-    width:100px; height:25px; line-height:15px; border-radius:7px;
-    font-size:0.7rem; display:inline-block;
-    z-index:13; margin-left:-50px; background-color:#fff;
+    width:120px; height:30px; line-height:15px; border-radius:7px;
+    font-size:0.9rem; display:inline-block;
+    z-index:13; margin-left:-60px; background-color:#fff;
   }
 
   .wrap_btn {
@@ -963,8 +963,8 @@ html,body{overflow:hidden;height:100%;}
   .area_content ul li{display:inline-block;}
   .area_modal .close_btn{
     position:fixed; top:20px; right:20px;
-    width:80px; height:20px; line-height:15px; border-radius:7px;
-    font-size:0.8rem; display:inline-block;
+    width:120px; height:30px; line-height:15px; border-radius:7px;
+    font-size:0.9rem; display:inline-block;
     z-index:13; background-color:#fff;
   }
 
@@ -1010,8 +1010,8 @@ html,body{overflow:hidden;height:100%;}
   .univ_content table tr td #sungsin01_text strong{letter-spacing: -0.03rem}
   .univ_modal .close_btn{
     position:absolute; top:93%; left:50%;
-    width:100px; height:25px; line-height:15px; border-radius:7px;
-    margin-left:-50px; margin-top:-12.5px;
+    width:120px; height:30px; line-height:15px; border-radius:7px;
+    margin-left:-60px; margin-top:-15px;
     font-size:0.7rem; display:inline-block;
     z-index:17; background-color:#fff;
   }
@@ -1105,9 +1105,9 @@ html,body{overflow:hidden;height:100%;}
   #text_compass_mobile{width:350px; height:auto; display:inline-block;}
   #compass_text {display:none;}
   #compass_modal .close_btn{position:absolute; top:87%; left:50%;
-    width:100px; height:25px; line-height:15px; border-radius:7px;
-    font-size:0.7rem; display:inline-block;
-    z-index:13; margin-left:-50px; background-color:#fff;
+    width:120px; height:30px; line-height:15px; border-radius:7px;
+    font-size:0.9rem; display:inline-block;
+    z-index:13; margin-left:-60px; background-color:#fff;
   }
 
   .wrap_btn {
@@ -1167,8 +1167,8 @@ html,body{overflow:hidden;height:100%;}
   .area_content ul li{display:inline-block;}
   .area_modal .close_btn{
     position:fixed; top:20px; right:20px;
-    width:80px; height:20px; line-height:15px; border-radius:7px;
-    font-size:0.8rem; display:inline-block;
+    width:120px; height:30px; line-height:15px; border-radius:7px;
+    font-size:0.9rem; display:inline-block;
     z-index:13; background-color:#fff;
   }
 
@@ -1214,7 +1214,7 @@ html,body{overflow:hidden;height:100%;}
   .univ_content table tr td #sungsin01_text strong{letter-spacing: -0.03rem}
   .univ_modal .close_btn{
     position:absolute; top:95%; left:50%;
-    width:100px; height:25px; line-height:15px; border-radius:7px;
+    width:120px; height:30px; line-height:15px; border-radius:7px;
     margin-left:-50px;
     font-size:0.7rem; display:inline-block;
     z-index:17; background-color:#fff;
@@ -1310,9 +1310,9 @@ html,body{overflow:hidden;height:100%;}
   #text_compass_mobile{width:320px; height:auto; display:inline-block;}
   #compass_text {display:none;}
   #compass_modal .close_btn{position:absolute; top:87%; left:50%;
-    width:100px; height:25px; line-height:15px; border-radius:7px;
-    font-size:0.7rem; display:inline-block;
-    z-index:13; margin-left:-50px; background-color:#fff;
+    width:120px; height:30px; line-height:15px; border-radius:7px;
+    font-size:0.9rem; display:inline-block;
+    z-index:13; margin-left:-60px; background-color:#fff;
   }
 
   .wrap_btn {
@@ -1372,8 +1372,8 @@ html,body{overflow:hidden;height:100%;}
   .area_content ul li{display:inline-block;}
   .area_modal .close_btn{
     position:fixed; top:20px; right:20px;
-    width:80px; height:20px; line-height:15px; border-radius:7px;
-    font-size:0.8rem; display:inline-block;
+    width:120px; height:30px; line-height:15px; border-radius:7px;
+    font-size:0.9rem; display:inline-block;
     z-index:13; background-color:#fff;
   }
 
@@ -1419,8 +1419,8 @@ html,body{overflow:hidden;height:100%;}
   .univ_content table tr td #sungsin01_text strong{letter-spacing: -0.03rem}
   .univ_modal .close_btn{
     position:absolute; top:95%; left:50%;
-    width:100px; height:25px; line-height:15px; border-radius:7px;
-    margin-left:-50px;
+    width:120px; height:30px; line-height:15px; border-radius:7px;
+    margin-left:-60px;
     font-size:0.7rem; display:inline-block;
     z-index:17; background-color:#fff;
   }
@@ -1515,9 +1515,9 @@ html,body{overflow:hidden;height:100%;}
   #text_compass_mobile{width:320px; height:auto; display:inline-block;}
   #compass_text {display:none;}
   #compass_modal .close_btn{position:absolute; top:87%; left:50%;
-    width:100px; height:25px; line-height:15px; border-radius:7px;
-    font-size:0.7rem; display:inline-block;
-    z-index:13; margin-left:-50px; background-color:#fff;
+    width:120px; height:30px; line-height:15px; border-radius:7px;
+    font-size:0.9rem; display:inline-block;
+    z-index:13; margin-left:-60px; background-color:#fff;
   }
 
   .wrap_btn {
@@ -1577,8 +1577,8 @@ html,body{overflow:hidden;height:100%;}
   .area_content ul li{display:inline-block;}
   .area_modal .close_btn{
     position:fixed; top:20px; right:20px;
-    width:80px; height:20px; line-height:15px; border-radius:7px;
-    font-size:0.8rem; display:inline-block;
+    width:120px; height:30px; line-height:15px; border-radius:7px;
+    font-size:0.9rem; display:inline-block;
     z-index:13; background-color:#fff;
   }
 
@@ -1625,8 +1625,8 @@ html,body{overflow:hidden;height:100%;}
   .univ_content table tr td #sungsin01_text strong{letter-spacing: -0.03rem}
   .univ_modal .close_btn{
     position:absolute; top:95%; left:50%;
-    width:100px; height:25px; line-height:15px; border-radius:7px;
-    margin-left:-50px;
+    width:120px; height:30px; line-height:15px; border-radius:7px;
+    margin-left:-60px;
     font-size:0.7rem; display:inline-block;
     z-index:17; background-color:#fff;
   }
