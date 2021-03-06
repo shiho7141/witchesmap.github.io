@@ -288,8 +288,8 @@ html,body{overflow:hidden;height:100%;}
   #compass_text {display:none;}
   #compass_modal .close_btn{position:absolute; top:110%; left:50%;
     width:120px; height:30px; line-height:15px; border-radius:7px;
-    font-size:0.9rem; display:inline-block;
-    z-index:13; margin-left:-60px; background-color:#fff;
+    font-size:1.1rem; display:inline-block;
+    z-index:13; margin-left:-60px; background-color:#fff; font-family: 'Black And White Picture', sans-serif;
   }
 
   .wrap_btn {
@@ -301,8 +301,8 @@ html,body{overflow:hidden;height:100%;}
   .content_btn {
     width: 130px;
     height: 40px;
-    font-family: '맑은고딕';
-    font-size: 1rem;
+    font-family: 'Black And White Picture', sans-serif;
+    font-size: 1.3rem;
     text-transform: uppercase;
     letter-spacing: 2.5px;
     font-weight: 500;
@@ -350,8 +350,8 @@ html,body{overflow:hidden;height:100%;}
   .area_modal .close_btn{
     position:fixed; top:40px; right:40px;
     width:120px; height:30px; line-height:15px; border-radius:7px;
-    font-size:0.9rem; display:inline-block;
-    z-index:13; background-color:#fff;
+    font-size:1.1rem; display:inline-block;
+    z-index:13; background-color:#fff; font-family: 'Black And White Picture', sans-serif;
   }
 
   .univ_modal{
@@ -378,8 +378,8 @@ html,body{overflow:hidden;height:100%;}
     position:absolute; top:92%; left:50%;
     width:120px; height:30px; line-height:15px; border-radius:7px;
     margin-left:-60px;
-    font-size:0.9rem; display:inline-block;
-    z-index:17;
+    font-size:1.1rem; display:inline-block;
+    z-index:17; font-family: 'Black And White Picture', sans-serif;
   }
 
   .univ_content > div{width:450px; height:28px; font-size:12px; padding-top:8px;}
@@ -403,8 +403,8 @@ html,body{overflow:hidden;height:100%;}
     position:absolute; top:75%; left:50%;
     width:180px; height:45px; line-height:15px; border-radius:9px;
     margin-left:-90px;
-    font-size:0.9rem; display:inline-block;
-    z-index:17; background-color:#fff;
+    font-size:1rem; display:inline-block;
+    z-index:17; background-color:#fff; font-family: 'Black And White Picture', sans-serif;
   }
 
   #wseoul_content ul li img, #eseoul_content ul li img, #universal_content ul li img,
@@ -498,8 +498,8 @@ html,body{overflow:hidden;height:100%;}
   #compass_text {display:none;}
   #compass_modal .close_btn{position:absolute; top:90%; left:50%;
     width:120px; height:30px; line-height:15px; border-radius:7px;
-    font-size:0.9rem; display:inline-block;
-    z-index:13; margin-left:-60px; background-color:#fff;
+    font-size:1.1rem; display:inline-block;
+    z-index:13; margin-left:-60px; background-color:#fff; font-family: 'Black And White Picture', sans-serif;
   }
 
   .wrap_btn {
@@ -511,8 +511,8 @@ html,body{overflow:hidden;height:100%;}
   .content_btn {
     width: 130px;
     height: 40px;
-    font-family: '맑은고딕';
-    font-size: 1rem;
+    font-family: 'Black And White Picture', sans-serif;
+    font-size: 1.3rem;
     text-transform: uppercase;
     letter-spacing: 2.5px;
     font-weight: 500;
@@ -560,8 +560,8 @@ html,body{overflow:hidden;height:100%;}
   .area_modal .close_btn{
     position:fixed; top:40px; right:40px;
     width:120px; height:30px; line-height:15px; border-radius:7px;
-    font-size:0.9rem; display:inline-block;
-    z-index:13; background-color:#fff;
+    font-size:1.1rem; display:inline-block;
+    z-index:13; background-color:#fff; font-family: 'Black And White Picture', sans-serif;
   }
 
   .univ_modal{
@@ -605,8 +605,8 @@ html,body{overflow:hidden;height:100%;}
     position:absolute; top:85%; left:50%;
     width:180px; height:45px; line-height:15px; border-radius:9px;
     margin-left:-90px;
-    font-size:0.9rem; display:inline-block;
-    z-index:17; background-color:#fff;
+    font-size:1rem; display:inline-block;
+    z-index:17; background-color:#fff; font-family: 'Black And White Picture', sans-serif;
   }
 
   #wseoul_content ul li img, #eseoul_content ul li img, #universal_content ul li img,
@@ -699,7 +699,7 @@ html,body{overflow:hidden;height:100%;}
   #compass_text {display:none;}
   #compass_modal .close_btn{position:absolute; top:87%; left:50%;
     width:120px; height:30px; line-height:15px; border-radius:7px;
-    font-size:0.9rem; display:inline-block;
+    font-size:1.1rem; font-family: 'Black And White Picture', sans-serif; display:inline-block;
     z-index:13; margin-left:-60px; background-color:#fff;
   }
 
@@ -712,8 +712,8 @@ html,body{overflow:hidden;height:100%;}
   .content_btn {
     width: 97.5px;
     height: 30px;
-    font-family: '맑은고딕';
-    font-size: 0.8rem;
+    font-family: 'Black And White Picture', sans-serif;
+    font-size: 1.2rem;
     text-transform: uppercase;
     letter-spacing: 0;
     font-weight: 500;
@@ -761,8 +761,8 @@ html,body{overflow:hidden;height:100%;}
   .area_modal .close_btn{
     position:fixed; top:20px; right:20px;
     width:120px; height:30px; line-height:15px; border-radius:7px;
-    font-size:0.9rem; display:inline-block;
-    z-index:13; background-color:#fff;
+    font-size:1.1rem; display:inline-block;
+    z-index:13; background-color:#fff; font-family: 'Black And White Picture', sans-serif;
   }
 
   .univ_modal{
@@ -809,8 +809,8 @@ html,body{overflow:hidden;height:100%;}
     position:absolute; top:93%; left:50%;
     width:120px; height:30px; line-height:15px; border-radius:7px;
     margin-left:-60px;
-    font-size:0.7rem; display:inline-block;
-    z-index:17; background-color:#fff;
+    font-size:1rem; display:inline-block;
+    z-index:17; background-color:#fff; font-family: 'Black And White Picture', sans-serif;
   }
 
   #wseoul_content ul li img, #eseoul_content ul li img, #universal_content ul li img,
@@ -903,8 +903,8 @@ html,body{overflow:hidden;height:100%;}
   #compass_text {display:none;}
   #compass_modal .close_btn{position:absolute; top:87%; left:50%;
     width:120px; height:30px; line-height:15px; border-radius:7px;
-    font-size:0.9rem; display:inline-block;
-    z-index:13; margin-left:-60px; background-color:#fff;
+    font-size:1.1rem; display:inline-block;
+    z-index:13; margin-left:-60px; background-color:#fff; font-family: 'Black And White Picture', sans-serif;
   }
 
   .wrap_btn {
@@ -916,8 +916,8 @@ html,body{overflow:hidden;height:100%;}
   .content_btn {
     width: 97.5px;
     height: 30px;
-    font-family: '맑은고딕';
-    font-size: 0.8rem;
+    font-family: 'Black And White Picture', sans-serif;
+    font-size: 1.3rem;
     text-transform: uppercase;
     letter-spacing: 0;
     font-weight: 500;
@@ -965,8 +965,8 @@ html,body{overflow:hidden;height:100%;}
   .area_modal .close_btn{
     position:fixed; top:20px; right:20px;
     width:120px; height:30px; line-height:15px; border-radius:7px;
-    font-size:0.9rem; display:inline-block;
-    z-index:13; background-color:#fff;
+    font-size:1.1rem; display:inline-block;
+    z-index:13; background-color:#fff; font-family: 'Black And White Picture', sans-serif;
   }
 
   .univ_modal{
@@ -1013,8 +1013,8 @@ html,body{overflow:hidden;height:100%;}
     position:absolute; top:93%; left:50%;
     width:120px; height:30px; line-height:15px; border-radius:7px;
     margin-left:-60px; margin-top:-15px;
-    font-size:0.7rem; display:inline-block;
-    z-index:17; background-color:#fff;
+    font-size:1rem; display:inline-block;
+    z-index:17; background-color:#fff;font-family: 'Black And White Picture', sans-serif;
   }
 
   #wseoul_content ul li img, #eseoul_content ul li img, #universal_content ul li img,
@@ -1107,8 +1107,8 @@ html,body{overflow:hidden;height:100%;}
   #compass_text {display:none;}
   #compass_modal .close_btn{position:absolute; top:87%; left:50%;
     width:120px; height:30px; line-height:15px; border-radius:7px;
-    font-size:0.9rem; display:inline-block;
-    z-index:13; margin-left:-60px; background-color:#fff;
+    font-size:1.1rem; display:inline-block;
+    z-index:13; margin-left:-60px; background-color:#fff; font-family: 'Black And White Picture', sans-serif;
   }
 
   .wrap_btn {
@@ -1120,8 +1120,8 @@ html,body{overflow:hidden;height:100%;}
   .content_btn {
     width: 97.5px;
     height: 30px;
-    font-family: '맑은고딕';
-    font-size: 0.8rem;
+    font-family: 'Black And White Picture', sans-serif;
+    font-size: 1.3rem;
     text-transform: uppercase;
     letter-spacing: 0;
     font-weight: 500;
@@ -1169,8 +1169,8 @@ html,body{overflow:hidden;height:100%;}
   .area_modal .close_btn{
     position:fixed; top:20px; right:20px;
     width:120px; height:30px; line-height:15px; border-radius:7px;
-    font-size:0.9rem; display:inline-block;
-    z-index:13; background-color:#fff;
+    font-size:1.1rem; display:inline-block;
+    z-index:13; background-color:#fff; font-family: 'Black And White Picture', sans-serif;
   }
 
   .univ_modal{
@@ -1217,8 +1217,8 @@ html,body{overflow:hidden;height:100%;}
     position:absolute; top:95%; left:50%;
     width:120px; height:30px; line-height:15px; border-radius:7px;
     margin-left:-50px;
-    font-size:0.7rem; display:inline-block;
-    z-index:17; background-color:#fff;
+    font-size:1rem; display:inline-block;
+    z-index:17; background-color:#fff; font-family: 'Black And White Picture', sans-serif;
   }
 
   #wseoul_content ul li img, #eseoul_content ul li img, #universal_content ul li img,
@@ -1312,8 +1312,8 @@ html,body{overflow:hidden;height:100%;}
   #compass_text {display:none;}
   #compass_modal .close_btn{position:absolute; top:87%; left:50%;
     width:120px; height:30px; line-height:15px; border-radius:7px;
-    font-size:0.9rem; display:inline-block;
-    z-index:13; margin-left:-60px; background-color:#fff;
+    font-size:1.1rem; display:inline-block;
+    z-index:13; margin-left:-60px; background-color:#fff; font-family: 'Black And White Picture', sans-serif;
   }
 
   .wrap_btn {
@@ -1325,8 +1325,8 @@ html,body{overflow:hidden;height:100%;}
   .content_btn {
     width: 73.125px;
     height: 22.5px;
-    font-family: '맑은고딕';
-    font-size: 0.7rem;
+    font-family: 'Black And White Picture', sans-serif;
+    font-size: 1.1rem;
     text-transform: uppercase;
     letter-spacing: 0;
     font-weight: 500;
@@ -1374,8 +1374,8 @@ html,body{overflow:hidden;height:100%;}
   .area_modal .close_btn{
     position:fixed; top:20px; right:20px;
     width:120px; height:30px; line-height:15px; border-radius:7px;
-    font-size:0.9rem; display:inline-block;
-    z-index:13; background-color:#fff;
+    font-size:1.1rem; display:inline-block;
+    z-index:13; background-color:#fff; font-family: 'Black And White Picture', sans-serif;
   }
 
   .univ_modal{
@@ -1422,8 +1422,8 @@ html,body{overflow:hidden;height:100%;}
     position:absolute; top:95%; left:50%;
     width:120px; height:30px; line-height:15px; border-radius:7px;
     margin-left:-60px;
-    font-size:0.7rem; display:inline-block;
-    z-index:17; background-color:#fff;
+    font-size:1rem; display:inline-block;
+    z-index:17; background-color:#fff; font-family: 'Black And White Picture', sans-serif;
   }
 
   #wseoul_content ul li img, #eseoul_content ul li img, #universal_content ul li img,
@@ -1517,8 +1517,8 @@ html,body{overflow:hidden;height:100%;}
   #compass_text {display:none;}
   #compass_modal .close_btn{position:absolute; top:87%; left:50%;
     width:120px; height:30px; line-height:15px; border-radius:7px;
-    font-size:0.9rem; display:inline-block;
-    z-index:13; margin-left:-60px; background-color:#fff;
+    font-size:1.1rem; display:inline-block;
+    z-index:13; margin-left:-60px; background-color:#fff; font-family: 'Black And White Picture', sans-serif;
   }
 
   .wrap_btn {
@@ -1530,8 +1530,8 @@ html,body{overflow:hidden;height:100%;}
   .content_btn {
     width: 73.125px;
     height: 22.5px;
-    font-family: '맑은고딕';
-    font-size: 0.7rem;
+    font-family: 'Black And White Picture', sans-serif;
+    font-size: 1.1rem;
     text-transform: uppercase;
     letter-spacing: 0;
     font-weight: 500;
@@ -1579,8 +1579,8 @@ html,body{overflow:hidden;height:100%;}
   .area_modal .close_btn{
     position:fixed; top:20px; right:20px;
     width:120px; height:30px; line-height:15px; border-radius:7px;
-    font-size:0.9rem; display:inline-block;
-    z-index:13; background-color:#fff;
+    font-size:1.1rem; display:inline-block;
+    z-index:13; background-color:#fff; font-family: 'Black And White Picture', sans-serif;
   }
 
   .univ_modal{
@@ -1628,8 +1628,8 @@ html,body{overflow:hidden;height:100%;}
     position:absolute; top:95%; left:50%;
     width:120px; height:30px; line-height:15px; border-radius:7px;
     margin-left:-60px;
-    font-size:0.7rem; display:inline-block;
-    z-index:17; background-color:#fff;
+    font-size:1.0rem; display:inline-block;
+    z-index:17; background-color:#fff; font-family: 'Black And White Picture', sans-serif;
   }
 
   #wseoul_content ul li img, #eseoul_content ul li img, #universal_content ul li img,
