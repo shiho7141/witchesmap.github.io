@@ -24,6 +24,7 @@ a:hover {text-decoration:none}
 .blind{display: none;overflow: hidden;position: absolute;width: 0;height: 0;padding: 0;margin: 0; font-size: 0;line-height: 0; text-indent: -9999em; visibility: hidden; outline:none; z-index: -1;}
 html,body{overflow:hidden;height:100%;}
 
+
 @media screen and (max-width:2000px){
   *{
     cursor:none;
@@ -88,7 +89,7 @@ html,body{overflow:hidden;height:100%;}
   #compass_modal .close_btn{position:absolute; top:100%; left:50%;
     width:120px; height:30px; line-height:15px; border-radius:7px; background-color:#fff;
     font-size:0.9rem; display:inline-block;
-    z-index:13; margin-left:-60px;
+    z-index:13; margin-left:-60px; font-family: 'Black And White Picture', sans-serif;
   }
 
   .wrap_btn {
@@ -100,7 +101,7 @@ html,body{overflow:hidden;height:100%;}
   .content_btn {
     width: 130px;
     height: 40px;
-    font-family: '맑은고딕';
+    font-family: 'Black And White Picture', sans-serif;
     font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 2.5px;
@@ -150,7 +151,7 @@ html,body{overflow:hidden;height:100%;}
     position:fixed; top:20px; right:20px;
     width:120px; height:30px; line-height:15px; border-radius:7px;
     font-size:0.9rem; display:inline-block;
-    z-index:13; background-color:#fff;
+    z-index:13; background-color:#fff; font-family: 'Black And White Picture', sans-serif;
   }
 
   .univ_modal{
@@ -194,7 +195,7 @@ html,body{overflow:hidden;height:100%;}
     width:120px; height:30px; line-height:15px; border-radius:7px;
     margin-left:-60px;
     font-size:0.7rem; display:inline-block;
-    z-index:17; background-color:#fff;
+    z-index:17; background-color:#fff; font-family: 'Black And White Picture', sans-serif;
   }
 
   #wseoul_content ul li img, #eseoul_content ul li img, #universal_content ul li img,
