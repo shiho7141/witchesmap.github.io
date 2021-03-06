@@ -88,7 +88,7 @@ html,body{overflow:hidden;height:100%;}
   #compass_text {display:none;}
   #compass_modal .close_btn{position:absolute; top:100%; left:50%;
     width:120px; height:30px; line-height:15px; border-radius:7px; background-color:#fff;
-    font-size:0.9rem; display:inline-block;
+    font-size:1.1rem; display:inline-block;
     z-index:13; margin-left:-60px; font-family: 'Black And White Picture', sans-serif;
   }
 
@@ -102,7 +102,7 @@ html,body{overflow:hidden;height:100%;}
     width: 130px;
     height: 40px;
     font-family: 'Black And White Picture', sans-serif;
-    font-size: 1rem;
+    font-size: 1.3rem;
     text-transform: uppercase;
     letter-spacing: 2.5px;
     font-weight: 500;
@@ -150,7 +150,7 @@ html,body{overflow:hidden;height:100%;}
   .area_modal .close_btn{
     position:fixed; top:20px; right:20px;
     width:120px; height:30px; line-height:15px; border-radius:7px;
-    font-size:0.9rem; display:inline-block;
+    font-size:1.1rem; display:inline-block;
     z-index:13; background-color:#fff; font-family: 'Black And White Picture', sans-serif;
   }
 
@@ -194,7 +194,7 @@ html,body{overflow:hidden;height:100%;}
     position:absolute; top:96%; left:50%; margin-top:-15px;
     width:120px; height:30px; line-height:15px; border-radius:7px;
     margin-left:-60px;
-    font-size:0.7rem; display:inline-block;
+    font-size:1rem; display:inline-block;
     z-index:17; background-color:#fff; font-family: 'Black And White Picture', sans-serif;
   }
 
